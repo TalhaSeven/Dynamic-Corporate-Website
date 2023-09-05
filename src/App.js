@@ -7,6 +7,7 @@ function App() {
     <div>
       <Navbar />
       <Slider2 />
+      <p>slm</p>
     </div>
   );
 }
