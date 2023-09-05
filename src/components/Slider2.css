@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Prev & Next */
+
+.buttons{
+    position: absolute;
+     top: 50%;
+    right: 3%;
+    transform: translate(-50%, -50%);
+    }
+
+.buttons button{
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+
+
+button:hover{
+    color: black;
+    background-color: white;
+}
+
+.sliderContainer{
+    width: 100%;
+    height: 450px;
+    background-color: aqua;
+}
+
+.sliderContainer .carousel-items{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.carousel-items .items{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.firstItem{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,29,26,0) 79%), url("../image/slider3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+     background-position: 80% ;
+}
+.secondItem{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,29,26,0) 79%), url("../image/slider2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+     background-position: 80% ;
+
+
+}
+.thirdItem{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,29,26,0) 79%), url("../image/slider1.jpg");
+     background-repeat: no-repeat;
+    background-size: cover; 
+     background-position: 80% ; 
+
+
+}
+
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+color: white;
+}
+
+.content span, div {
+font-weight: 500;
+}
+
+.content span{
+    margin-bottom: 20px ;
+}
+
+.content div {
+    margin-top: 20px;
+    background-color: #ff9b24;
+    border-radius: 50px;
+    width: 250px;
+    text-align: center;
+     transition: background-color 0.3s ease, transform 0.3s ease; 
+
+}
+
+.content div a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 9px;
+}
+
+.content div:hover{
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+.content h1{
+    font-weight: 700;
+}
+
+.content{
+        position: absolute;
+
+    }
+
+/* MEDIA QUERRY */
+
+
+/* 320px */
+
+@media screen and (min-width:320px){
+    
+    .content{
+        position: absolute;
+        top: 120px;
+        left: 10px;
+        max-width: 300px;
+
+    }
+
+    .content span{
+        font-size: 18px;
+        
+    }
+    .content h1{
+        font-size: 40px;
+    }
+    .content div{
+        font-size: 16px;
+    }
+    button{
+        visibility: hidden;
+     }
+
+   
+
+     
+} 
+
+
+
+/* 576px */
+
+@media screen and (min-width:576px) {
+
+    .content{
+        max-width: 500px;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+
+    }
+    .content h1{
+        font-size: 45px;
+    }
+
+    /* img{
+        height: 600px;
+    }
+
+    .img1Div{
+        height: 600px;
+     
+    }
+    
+    .img2Div{
+        height: 600px;
+     
+    } */
+    
+    img{
+        height: 100vh;
+    }
+
+    .img1Div{
+        height: 100vh;
+     
+    }
+    
+    .img2Div{
+        height: 100vh;
+     
+    }
+}
+
+
+/* 768px */
+
+@media screen and (min-width:768px){
+
+    /* .sliderContainer{
+        height: 600px;
+    } */
+
+    .sliderContainer{
+        height: 100vh;
+    }
+    .content{
+        max-width: 500px;
+        top: 50%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+
+    }
+    .content span{
+        font-size: 23px;
+        
+    }
+    .content h1{
+        font-size: 50px;
+    }
+
+    .content div {
+        
+        margin-top: 20px;
+        background-color: #ff9b24;
+        padding: 10px;
+       border-radius: 50px;
+        width: 250px;
+        text-align: center;
+    }
+
+    button{
+        visibility: visible;
+      
+     }
+   
+
+  
+}
+
+
+
+/* 996px */
+
+@media screen and (min-width:996px) {
+
+    /* .sliderContainer{
+        height: 700px;
+    } */
+   
+
+   .content{
+        max-width: 500px;
+        top: 50%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .content h1{
+        font-size: 60px;
+    }
+   
+    
+}
+
+
+/* 1200px */
+
+@media screen and (min-width:1200px) {
+
+    /* .sliderContainer{
+        height: 750px;
+    } */
+    .content{
+        max-width: 650px;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+
+    }
+
+   
+    .content h1{
+        font-size: 80px;
+    }
+
+}
+
+
+/* 1440px */
+
+@media screen and (min-width:1440px) {
+    /* .sliderContainer{
+        height: 820px;
+    } */
+    
+}

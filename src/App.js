@@ -1,10 +1,14 @@
 
 import './App.css';
+import Slider2 from './components/Slider2';
 
 function App() {
   return (
     <div>
-      <h1>Milestone</h1>
+    
+ <Slider2/>
+
+ 
     </div>
   );
 }
