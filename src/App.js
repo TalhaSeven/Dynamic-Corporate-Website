@@ -1,12 +1,12 @@
-
-import './App.css';
+import "./App.css";
+import Slider2 from "./components/Slider2";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      <h1>Milestone</h1>
-      <h1>Milestone Project</h1>
-      <p>New line here</p>
+      <Navbar />
+      <Slider2 />
     </div>
   );
 }
