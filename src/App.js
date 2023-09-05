@@ -1,15 +1,16 @@
 
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Slider2 from './components/Slider2';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
     
- <Slider2/>
+    <Slider2/>
 
  
-    </div>
+    </BrowserRouter>
   );
 }
 
