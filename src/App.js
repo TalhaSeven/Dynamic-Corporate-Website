@@ -1,12 +1,12 @@
 
 import './App.css';
+import Navbar from './components/Navbar';
 import Slider2 from './components/Slider2';
 
 function App() {
   return (
     <div>
-  
-      <h1>Milestone Project</h1>
+      <Navbar/>
       <Slider2/>
     </div>
   );
