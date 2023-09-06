@@ -1,13 +1,15 @@
-
-import './App.css';
+import "./App.css";
+import Slider2 from "./components/Slider2";
+import Navbar from "./components/Navbar";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <h1>Milestone</h1>
-      <h1>Milestone Project</h1>
-      <p>New line here</p>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Slider2 />
+    
+    </BrowserRouter>
   );
 }
 
