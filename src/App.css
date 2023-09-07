@@ -1,0 +1,24 @@
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 3px !important;
+}
+.swiper-pagination-bullet{
+    width: 16px !important;
+    display: inline-block;
+    border-radius: 10px !important;
+}
+.swiper-pagination-bullet-active {
+    background:#000 !important ;
+}
+
+.swiper-slide{
+  margin-bottom: 40px;
+ 
+
+}
+
+@media (max-width:768px) {
+    .swiper{
+       max-width:356px !important;
+      }
+}
+
