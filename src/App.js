@@ -2,6 +2,7 @@ import "./App.css";
 import Slider2 from "./components/Slider2";
 import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
+import Faq from "./components/Faq";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         join
       </h1>
       <Slider2 />
-    
+      {/* <Faq/> */}
     </BrowserRouter>
   );
 }
