@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React from 'react'
 
  const SocialMedia = () => {
   return (
     <div>
-        <a href="#">  <svg
+        <a href="/">  <svg
         xmlns="http://www.w3.org/2000/svg"
         width={23}
         height={23}
