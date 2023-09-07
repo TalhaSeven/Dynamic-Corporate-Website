@@ -8,11 +8,13 @@ import SwiperOur from "./components/SwiperOur";
 import Settling from "./components/Settling";
 
 import Faq from "./components/Faq";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
     <BrowserRouter>
       <Slider2 />
+      <ContactForm/>
 
       <Navbar />
 
