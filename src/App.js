@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Slider2 from "./components/Slider2";
 import Navbar from "./components/Navbar";
@@ -8,12 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <h1>
-        join
-      </h1>
       <Slider2 />
       {/* <Faq/> */}
     </BrowserRouter>
+
   );
 }
 
