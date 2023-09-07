@@ -22,3 +22,7 @@
       }
 }
 
+.settlingButton:hover{
+background-color: transparent !important;
+}
+
