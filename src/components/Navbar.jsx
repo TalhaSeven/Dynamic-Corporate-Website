@@ -47,7 +47,7 @@ const Navbar = () => {
       </button>
       {/* Collapsible navigation container */}
       <div
-        className="!visible hidden flex-grow basis-1 items-center sm:!flex lg:basis-auto"
+        className=" !visible menu hidden flex-grow basis-1 items-center sm:!flex lg:basis-auto"
         id="navbarSupportedContent1"
         data-te-collapse-item=""
       >
@@ -57,8 +57,8 @@ const Navbar = () => {
           href="#"
         >
           <img
-            src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp"
-            style={{ height: 15 }}
+            src="../images/logo.svg"
+            style={{ height: "50px" }}
             alt="TE Logo"
             loading="lazy"
           />
@@ -68,7 +68,7 @@ const Navbar = () => {
           className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
           data-te-navbar-nav-ref=""
         >
-          <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+          <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="" data-dropdown>
             {/* Dashboard link */}
             <a
               className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-nonelg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
@@ -77,6 +77,19 @@ const Navbar = () => {
             >
               Home
             </a>
+            <div className="dropdown">
+            <ul className='list-style-none' data-te-navbar-nav-ref="">
+              <li><a href="#">home1</a>
+                <div className="dropdown">
+                  <ul className='list-style-none' data-te-navbar-nav-ref="">
+                    <li>homex</li>
+                  </ul>
+                  </div>
+                  </li>
+              <li><a href="#">home2</a></li>
+              <li><a href="#">home3</a></li>
+            </ul>
+            </div>
           </li>
           {/* Team link */}
           <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
