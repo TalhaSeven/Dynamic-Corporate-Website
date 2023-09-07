@@ -58,7 +58,7 @@ const Navbar = () => {
         >
           <img
             src="../images/logo.svg"
-            style={{ height: 15 }}
+            style={{ height: "50px" }}
             alt="TE Logo"
             loading="lazy"
           />
@@ -81,7 +81,9 @@ const Navbar = () => {
             <ul className='list-style-none' data-te-navbar-nav-ref="">
               <li><a href="#">home1</a>
                 <div className="dropdown">
-                  <ul className='list-style-none' data-te-navbar-nav-ref=""></ul>
+                  <ul className='list-style-none' data-te-navbar-nav-ref="">
+                    <li>homex</li>
+                  </ul>
                   </div>
                   </li>
               <li><a href="#">home2</a></li>
