@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React from 'react'
 
  const SocialMedia = () => {
