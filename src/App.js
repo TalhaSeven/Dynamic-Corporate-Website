@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Slider2 />
-      {/* <Faq/> */}
+      <Faq/>
     </BrowserRouter>
   );
 }
