@@ -13,6 +13,13 @@ module.exports = {
       //   xl:'1140px',
       //  '2xl':'1140px',
       //  },
+      padding:{
+        DEFAULT:'1rem',
+        sm:'3rem',
+        lg:'6rem',
+        xl:'7rem',
+        '2xl':'6rem',
+      }
       },
     extend: {
       boxShadow: {
