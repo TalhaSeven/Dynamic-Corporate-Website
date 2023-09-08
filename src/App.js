@@ -14,6 +14,7 @@ import Faq from "./components/Faq";
 import ContactForm from "./components/ContactForm";
 
 import Table from "./components/table/Table";
+import WayToLearn from "./components/WayToLearn";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
        <Faq/>
       <SwiperOur />
       <Settling />
+      <WayToLearn/>
       <Table/>
 
     </BrowserRouter>
