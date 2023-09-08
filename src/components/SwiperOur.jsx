@@ -69,7 +69,7 @@ const SwiperOur = () => {
             <a href="/" className="font-semibold text-xl md:text-2xl   hover:text-[#00BBAE] duration-500">
               Settling
             </a>
-            <p className="text-[15px] lg:text-[16px] min-h-[72px] font-light">
+            <p className="text-[15px] lg:text-[16px] min-h-[66px] lg:min-h-[96px] font-light">
               To round out our weekend of celebra tions, we are holding our
               reunion.
             </p>
@@ -109,7 +109,7 @@ const SwiperOur = () => {
             <a href="/" className="font-semibold text-xl md:text-2xl  hover:text-[#FF9B24] duration-500">
               Play Group
             </a>
-            <p className="text-[15px] lg:text-[16px] min-h-[72px] font-light">
+            <p className="text-[15px] lg:text-[16px] min-h-[66px] lg:min-h-[96px] font-light">
             We will be magically transform the School’s Sports Centre into a full game area.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center  bg-[#FF9B24]  rounded-xl p-3 sm:divide-x-2 divide-dashed text-white">
@@ -148,7 +148,7 @@ const SwiperOur = () => {
             <a href="/" className="font-semibold text-xl md:text-2xl  hover:text-[#FF577B] duration-500">
               Pre-Nursery
             </a>
-            <p className="text-[15px] lg:text-[16px] min-h-[72px] font-light">Kindedo not only for all our dedicated 2023 reunion year groups program.</p>
+            <p className="text-[15px] lg:text-[16px] min-h-[66px] lg:min-h-[96px] font-light">Kindedo not only for all our dedicated 2023 reunion year groups program.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center  bg-[#FF577B]  rounded-xl p-3 sm:divide-x-2 divide-dashed text-white">
               <div className="flex sm:flex-col items-center space-x-2 text-center basis-1/3">
                 <span className="font-bold text-sm md:text-base whitespace-nowrap">4-5 Yrs</span>
@@ -194,7 +194,7 @@ const SwiperOur = () => {
             <a href="/" className="font-semibold text-xl md:text-2xl  hover:text-[#00BBAE] duration-500">
               Settling
             </a>
-            <p className="text-[15px] lg:text-[16px] min-h-[72px] font-light">
+            <p className="text-[15px] lg:text-[16px] min-h-[66px] lg:min-h-[96px] font-light">
               To round out our weekend of celebra tions, we are holding our
               reunion.
             </p>
@@ -234,7 +234,7 @@ const SwiperOur = () => {
             <a href="/" className="font-semibold text-xl md:text-2xl   hover:text-[#FF9B24] duration-500">
               Play Group
             </a>
-            <p className="text-[15px] lg:text-[16px] min-h-[72px] font-light">
+            <p className="text-[15px] lg:text-[16px] min-h-[66px] lg:min-h-[96px] font-light">
             We will be magically transform the School’s Sports Centre into a full game area.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center  bg-[#FF9B24]  rounded-xl p-3 sm:divide-x-2 divide-dashed text-white">
