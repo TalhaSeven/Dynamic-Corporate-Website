@@ -29,6 +29,7 @@ function App() {
        <Faq/>
       <SwiperOur />
       <Settling />
+      <WayToLearn/>
       <Table/>
       <Programs/>
 
