@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import { Collapse, initTE } from "tw-elements";
-
 initTE({ Collapse });
-
 const Faq = () => {
-
-    
+  useEffect(() => {
+    initTE(Collapse);
+  }, []);
 
   return (
     <div className="bg-white">

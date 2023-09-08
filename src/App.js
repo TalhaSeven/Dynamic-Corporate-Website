@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import SwiperOur from "./components/SwiperOur";
 
 import Settling from "./components/Settling";
+import WayToLearn from "./components/WayToLearn";
 
 
 import Faq from "./components/Faq";
