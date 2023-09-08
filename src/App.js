@@ -18,10 +18,12 @@ function App() {
       <Navbar />
       
       <Slider2 />
+
        <Faq/>
       <SwiperOur />
       <Settling />
       <Table/>
+
     </BrowserRouter>
   );
 }
