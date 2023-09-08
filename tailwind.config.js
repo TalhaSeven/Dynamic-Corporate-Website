@@ -7,12 +7,12 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      screens: {
-        md:'540px',
-        lg:'720px',
-        xl:'1140px',
-       '2xl':'1140px',
-       },
+      // screens: {
+      //   md:'720px',
+      //   lg:'960px',
+      //   xl:'1140px',
+      //  '2xl':'1140px',
+      //  },
       },
     extend: {
       boxShadow: {
