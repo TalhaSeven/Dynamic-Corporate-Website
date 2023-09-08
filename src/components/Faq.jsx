@@ -1,16 +1,20 @@
+import { useEffect } from "react";
 import { Collapse, initTE } from "tw-elements";
 
 initTE({ Collapse });
 
 const Faq = () => {
+
+    
+
   return (
     <div className="bg-white">
       <h1>Know More About Kindedo</h1>
       <div id="accordionFlushExample" className="w-1/4">
-        <div className="w-full rounded-t-lg border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+        <div className="w-full rounded-t-lg border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
           <h2 className="mb-0" id="flush-headingOne">
             <button
-              className="group relative flex w-full items-center rounded-full border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-[#FF9B24] [&:not([data-te-collapse-collapsed])]:text-white [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+              className="group relative flex w-full items-center rounded-full border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:text-black [&:not([data-te-collapse-collapsed])]:bg-[#FF9B24] [&:not([data-te-collapse-collapsed])]:text-white [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
               type="button"
               data-te-collapse-init
               data-te-target="#flush-collapseOne"
@@ -51,10 +55,10 @@ const Faq = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+        <div className="w-full rounded-t-lg border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white ">
           <h2 className="mb-0" id="flush-headingTwo">
             <button
-              className="group relative flex w-full items-center rounded-full border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-[#FF9B24] [&:not([data-te-collapse-collapsed])]:text-white [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+              className="group relative flex w-full items-center rounded-full border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:text-black [&:not([data-te-collapse-collapsed])]:bg-[#FF9B24] [&:not([data-te-collapse-collapsed])]:text-white [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
               type="button"
               data-te-collapse-init
               data-te-collapse-collapsed
@@ -95,10 +99,10 @@ const Faq = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+        <div className="w-full rounded-t-lg border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
           <h2 className="mb-0" id="flush-headingThree">
             <button
-              className="group relative flex w-full items-center rounded-full border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-[#FF9B24] [&:not([data-te-collapse-collapsed])]:text-white [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+              className="group relative flex w-full items-center rounded-full border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:text-black [&:not([data-te-collapse-collapsed])]:bg-[#FF9B24] [&:not([data-te-collapse-collapsed])]:text-white [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
               type="button"
               data-te-collapse-init
               data-te-collapse-collapsed
