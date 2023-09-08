@@ -6,7 +6,7 @@ import SocialMedia from './SocialMedia';
 
  const NavbarTop = () => {
   return (
-    <div className='bg-[#00BBAE] h-[50px]'>
+    <div className='bg-[#00BBAE] h-[60px]'>
      <div className="flex justify-between items-center mx-4">
      <div className='flex gap-2'>
         <div>

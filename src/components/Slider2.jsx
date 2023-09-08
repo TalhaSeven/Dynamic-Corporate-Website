@@ -1,26 +1,59 @@
-import React from "react";
-import "./Slider2.css"
-
-
-
-import { Carousel, initTE } from "tw-elements";
 import { Link } from "react-router-dom";
+import "./Slider2.css"
+import { Carousel, initTE } from "tw-elements";
+import { useEffect } from "react";
 
-initTE({ Carousel });
+   
+  
+  const Slider2 = () =>{
 
-const Slider2 = () => {
+    useEffect(() => {
+  initTE( Carousel);
+    
+    }, [])
+    
+
   return (
-    <div
+  <div
     id="carouselExampleIndicators"
     className="relative sliderContainer"
     data-te-carousel-init=""
     data-te-ride="carousel"
   >
-
+     {/*Carousel indicators*/} 
     
-     {/*Carousel items*/} 
+    <div
+      className="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+      data-te-carousel-indicators=""
+    >
+      <button
+        type="button"
+        data-te-target="#carouselExampleIndicators"
+        data-te-slide-to={0}
+        data-te-carousel-active=""
+        className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-current="true"
+        aria-label="Slide 1"
+      />
+      <button
+        type="button"
+        data-te-target="#carouselExampleIndicators"
+        data-te-slide-to={1}
+        className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 2"
+      />
+      <button
+        type="button"
+        data-te-target="#carouselExampleIndicators"
+        data-te-slide-to={2}
+        className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 3"
+      />
+    </div>
+    
+     {/*Carousel items*/}
     <div className="carousel-items relative w-full  overflow-hidden after:clear-both after:block after:content-[''] ">
-       {/*First item*/}
+       {/*First item*/} 
       <div
         className="items firstItem relative float-left -mr-[100%] w-full h-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item=""
@@ -33,8 +66,15 @@ const Slider2 = () => {
             <Link to="#">Admission Open 22-23</Link>
           </div>
         </div>
+        
+        <img
+          src="{slider3}"
+          className="img1 block w-full h-full display"
+          alt="slider3"
+        />
+        
       </div>
-     {/*Second item*/} 
+       {/*Second item*/} 
       <div
         className="items secondItem  relative float-left -mr-[100%] hidden w-full h-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item=""
@@ -46,6 +86,13 @@ const Slider2 = () => {
             <Link to="#">Admission Open 22-23</Link>
           </div>
         </div>
+        
+        <img
+          src="{slider2}"
+          className="img2 block w-full h-full"
+          alt="slider2"
+        />
+        
       </div>
        {/*Third item*/}
       <div
@@ -59,15 +106,22 @@ const Slider2 = () => {
             <Link to="#">Admission Open 22-23</Link>
           </div>
         </div>
+        
+        <img
+          src="{slider1}"
+          className="img2 block w-full h-full"
+          alt="slider1"
+        />
+        
       </div>
     </div>
      {/*Carousel controls - prev item*/} 
     <div className="buttons">
       <button
         className="rounded-full text-xlg font-bold  z-[1] flex items-center justify-center border border-white border-solid bg-none p-0
-     text-center text-white  transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] 
-     hover:text-black hover:bg-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline 
-     focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+   text-center text-white  transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] 
+   hover:text-black hover:bg-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline 
+   focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
         data-te-target="#carouselExampleIndicators"
         data-te-slide="prev"
@@ -79,7 +133,7 @@ const Slider2 = () => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="h-6 w-6"
+            className="h-6 w-6  p-1"
           >
             <path
               strokeLinecap="round"
@@ -92,12 +146,12 @@ const Slider2 = () => {
           Previous
         </span>
       </button>
-     {/*Carousel controls - next item*/} 
+       {/*Carousel controls - next item*/} 
       <button
         className=" rounded-full  z-[1] flex items-center justify-center border border-white border-solid 
-    bg-none p-0 text-center text-white  transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] 
-    hover:text-black hover:bg-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline 
-    focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+  bg-none p-0 text-center text-white  transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] 
+  hover:text-black hover:bg-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline 
+  focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
         data-te-target="#carouselExampleIndicators"
         data-te-slide="next"
@@ -109,7 +163,7 @@ const Slider2 = () => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="h-6 w-6"
+            className="h-6 w-6 p-1"
           >
             <path
               strokeLinecap="round"
@@ -124,8 +178,8 @@ const Slider2 = () => {
       </button>
     </div>
   </div>
-  
   );
-};
+}
 
-export default Slider2;
+   export default Slider2;
+
