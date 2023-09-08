@@ -21,7 +21,7 @@ const WayToLearn = () => {
               href="about.html"
               className="text-[14px] bg-[#FF9B24] hover:bg-[#FF577B] overflow-hidden block w-30 px-4 relative group xs:px-8 py-5 rounded-3xl text-white  duration-900 "
             >
-              <span className="absolute left-6 bottom-3 group-hover: group-hover:left-6 group-hover:bottom-9 duration-500 ">
+              <span className="absolute left-6 bottom-2.5 group-hover: group-hover:left-6 group-hover:bottom-9 duration-500 ">
                 Know More
               </span>
               <span className="opacity-0 absolute left-6 -bottom-3  group-hover:-translate-y-6   group-hover:opacity-100 duration-500">
@@ -66,7 +66,7 @@ const WayToLearn = () => {
               href="about.html"
               className="text-[14px] bg-[#FF9B24] hover:bg-[#FF577B] overflow-hidden block w-30 px-4 relative group xs:px-8 py-5 rounded-3xl text-white  duration-900 "
             >
-              <span className="absolute left-6 bottom-3 group-hover: group-hover:left-6 group-hover:bottom-9 duration-500 ">
+              <span className="absolute left-6 bottom-2.5 group-hover: group-hover:left-6 group-hover:bottom-9 duration-500 ">
                 Know More
               </span>
               <span className="opacity-0 absolute left-6 -bottom-3  group-hover:-translate-y-6   group-hover:opacity-100 duration-500">
