@@ -15,6 +15,9 @@
  
 
 }
+.settlingButton:hover{
+background-color: transparent !important;
+}
 
 @media (max-width:768px) {
     .swiper{
@@ -22,7 +25,47 @@
       }
 }
 
-.settlingButton:hover{
-background-color: transparent !important;
+@media (min-width:1210px) {
+    .itemsSlide{
+      height: 100%;
+      }
+}
+
+@media (min-width:1230px) {
+    .settlingBorder{
+      
+     border-left :  1px solid #FF9B24!important;
+     border-right :  1px solid #FF9B24!important;
+      }
+}
+@media (max-width:1024px) {
+    .settlingBorder{
+     border-left :  1px solid #FF9B24!important;
+     border-right :  1px solid #FF9B24!important;
+      }
+}
+@media (max-width:640px) {
+    .settlingBorder{
+     border-left : none !important;
+     border-right :  none !important;
+      }
+      .settlingBorder,.perMonth,.settlingTeacher{
+        padding: 0 !important;
+    }
+}
+
+@media (max-width:300px) {
+    .imgCircle{
+        display: none;
+            }
+    .settlingBorder,.perMonth,.settlingTeacher{
+        padding: 0 !important;
+    }
+    .settlingWrapper{
+        margin-top: 20px;
+    }
+    .settlingBorder{
+        margin: 10px 0;
+    }
 }
 

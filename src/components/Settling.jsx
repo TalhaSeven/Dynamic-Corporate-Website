@@ -8,54 +8,54 @@ const Settling = () => {
   }, []);
 
   return (
-    <div className="py-10  font-fredoka">
-      <div className="flex space-x-5 container">
-        <div className=" carouselDiv basis-1/2">
+    <div className="p-8 lg:p-30 font-fredoka">
+      <div className="flex flex-col space-y-5 lg:space-y-0  lg:flex-row lg:space-x-5   ">
+        <div className=" basis-1/2 h-full w-full">
           <div
             id="carouselExampleCaptions"
-            className="relative rounded-lg"
+            className="relative rounded-lg "
             data-te-carousel-init=""
             data-te-ride="carousel"
           >
             {/*Carousel indicators*/}
 
             {/*Carousel items*/}
-            <div className="relative w-full overflow-hidden after:clear-both after:block after:content-[''] rounded-3xl">
+            <div className="itemsSlide relative w-full  overflow-hidden after:clear-both after:block after:content-[''] rounded-3xl">
               {/*First item*/}
               <div
-                className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                className="relative float-left -mr-[100%] h-full w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none "
                 data-te-carousel-active=""
                 data-te-carousel-item=""
                 style={{ backfaceVisibility: "hidden" }}
               >
                 <img
                   src="./image/home-program-1.jpg"
-                  className="block h-full w-full "
-                  alt="..."
+                  className="block  w-full  max-h-[400px]  md:max-h-[440px] lg:h-[496px] object-cover "
+                  alt="img"
                 />
                 <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"></div>
               </div>
               {/*Second item*/}
               <div
-                className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                className="relative float-left -mr-[100%] hidden h-full w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                 data-te-carousel-item=""
                 style={{ backfaceVisibility: "hidden" }}
               >
                 <img
                   src="./image/home-program-2.jpg"
-                  className="block w-full h-full"
+                  className="block w-full  object-cover max-h-[400px] md:max-h-[440px]  lg:h-[496px]"
                   alt="..."
                 />
               </div>
               {/*Third item*/}
               <div
-                className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                className="relative float-left -mr-[100%] h-full hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                 data-te-carousel-item=""
                 style={{ backfaceVisibility: "hidden" }}
               >
                 <img
                   src="./image/home-program-3.jpg"
-                  className="block w-full h-full"
+                  className="block w-full  object-cover max-h-[400px]  md:max-h-[440px] lg:h-[496px]"
                   alt="..."
                 />
               </div>
@@ -67,8 +67,8 @@ const Settling = () => {
               data-te-target="#carouselExampleCaptions"
               data-te-slide="prev"
             >
-              <span className="inline-block">
-                <div className="h-8 w-8 rounded-full border-2 flex text-white items-center justify-center hover:bg-white hover:text-black">
+              <span className="btnInline inline-block">
+                <div className="h-6 w-6 sm:h-8 sm:w-8 rounded-full border-2 flex text-white items-center justify-center hover:bg-white hover:text-black">
                   <i className="fa-solid fa-chevron-left"></i>
                 </div>
               </span>
@@ -83,8 +83,8 @@ const Settling = () => {
               data-te-target="#carouselExampleCaptions"
               data-te-slide="next"
             >
-              <span className="inline-block">
-                <div className="h-8 w-8 rounded-full border-2 flex items-center justify-center hover:bg-white hover:text-black">
+              <span className="btnInline inline-block">
+                <div className="h-6 w-6 sm:h-8 sm:w-8 rounded-full border-2 flex items-center justify-center hover:bg-white hover:text-black">
                   <i className="fa-solid fa-chevron-right"></i>
                 </div>
               </span>
@@ -94,46 +94,47 @@ const Settling = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col settlingDiv basis-1/2 bg-[#FFF6EB] p-5 justify-between rounded-3xl">
-          <h3 className="text-3xl font-semibold">Settling</h3>
-          <p className="font-light text-[15px]">
+        <div className=" basis-1/2 bg-[#FFF6EB]  flex flex-col justify-between rounded-3xl p-5 min-h-[400px] md:max-h-[440px] lg:h-[496px]">
+          <h3 className="text-3xl sm:text-4xl font-semibold pt-1 sm:pt-2">Settling</h3>
+          <p className="font-normal lg:font-light text-[15px] lg:min-h-[80px] py-2 lg:py-0">
             The foundation of the Montessori philosophy is based upon the idea
             that children should work at their own pace, according to their own
             strengths in surroundings that help to develop their intelligence,
             as well as social and physical abilities.
           </p>
-          <p className="font-light text-[15px]">
+          <p className="font-normal lg:font-light text-[15px] lg:min-h-[60px]">
             Observers of Montessori children note that they are confident,
             caring, independent as well as enthusiastic and motivated learners
             what they learn years comes from perceptive.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center   p-3 divide-x-2 divide-solid divide-[#FF9B24]">
-            <div className="flex sm:flex-col items-start justify-center  space-x-2  basis-1/2 ">
+
+          <div className="settlingWrapper flex  items-center justify-center xs:justify-evenly -ms-2 xl:justify-between  flex-wrap xs:mt-2  md:mt-0">
+            <div className="settlingTeacher flex  items-start  space-x-2   pe-2 ">
               <div className="flex ">
                 <img
                   src="image/author-1.png"
                   alt="img not found!"
-                  className="w-[73px] h-[73px]"
+                  className="imgCircle w-[73px] h-[73px]"
                 />
-                <div className="flex flex-col items-center justify-center">
-                  <span className="text-light text-sm md:text-base whitespace-nowrap">
+                <div className="flex flex-col  justify-center">
+                  <span className="text-light text-sm md:text-base whitespace-nowrap ">
                     Settling Teacher
                   </span>
-                  <span className="text-xl font-semibold">Alexia Honix</span>
+                  <span className="text-xl font-semibold whitespace-nowrap">Alexia Honix</span>
                 </div>
               </div>
             </div>
-            <div className="flex sm:flex-col items-center space-x-2 text-center basis-1/4 px-3">
-              <span className="text-sm md:text-base whitespace-nowrap">
+            <div className="settlingBorder flex flex-col  items-center justify-center px-5 lg:px-8 space-x-2 text-center h-[50px]    ">
+              <span className="text-sm md:text-base whitespace-nowrap ">
                 Categories
               </span>
-              <span className="text-xl font-semibold">Kindergarten</span>
+              <span className="text-xl font-semibold whitespace-nowrap">Kindergarten</span>
             </div>
-            <div className="flex sm:flex-col items-center space-x-2 text-center basis-1/4">
-              <span className="text-sm md:text-base whitespace-nowrap ">
+            <div className="perMonth flex flex-col items-center space-x-2 text-center ps-2">
+              <span className="text-sm md:text-base whitespace-nowrap  ">
                 Per/Month
               </span>
-              <span className="text-xl font-semibold">$160.00</span>
+              <span className="text-xl font-semibold whitespace-nowrap">$160.00</span>
             </div>
           </div>
         </div>

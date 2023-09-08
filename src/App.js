@@ -9,8 +9,10 @@ import SwiperOur from "./components/SwiperOur";
 
 import Settling from "./components/Settling";
 
+
 import Faq from "./components/Faq";
 import Table from "./components/table/Table";
+
 
 function App() {
   return (
