@@ -9,7 +9,7 @@ const Settling = () => {
 
   return (
     <div className="p-8 lg:p-30 font-fredoka">
-      <div className="flex flex-col space-y-5 lg:space-y-0  lg:flex-row lg:space-x-5 container  ">
+      <div className="flex flex-col space-y-5 lg:space-y-0  lg:flex-row lg:space-x-5   ">
         <div className=" basis-1/2 h-full w-full">
           <div
             id="carouselExampleCaptions"
@@ -95,7 +95,7 @@ const Settling = () => {
           </div>
         </div>
         <div className=" basis-1/2 bg-[#FFF6EB]  flex flex-col justify-between rounded-3xl p-5 min-h-[400px] md:max-h-[440px] lg:h-[496px]">
-          <h3 className="text-4xl font-semibold pt-2">Settling</h3>
+          <h3 className="text-3xl sm:text-4xl font-semibold pt-1 sm:pt-2">Settling</h3>
           <p className="font-normal lg:font-light text-[15px] lg:min-h-[80px] py-2 lg:py-0">
             The foundation of the Montessori philosophy is based upon the idea
             that children should work at their own pace, according to their own
@@ -108,8 +108,8 @@ const Settling = () => {
             what they learn years comes from perceptive.
           </p>
 
-          <div className="flex  items-center justify-center xs:justify-start xl:justify-between  flex-wrap xs:mt-2  md:mt-0">
-            <div className="settlingTeacher flex  items-start  space-x-2   pe-3 ">
+          <div className="settlingWrapper flex  items-center justify-center xs:justify-evenly -ms-2 xl:justify-between  flex-wrap xs:mt-2  md:mt-0">
+            <div className="settlingTeacher flex  items-start  space-x-2   pe-2 ">
               <div className="flex ">
                 <img
                   src="image/author-1.png"
@@ -124,7 +124,7 @@ const Settling = () => {
                 </div>
               </div>
             </div>
-            <div className="settlingBorder flex flex-col  items-center justify-center px-3 space-x-2 text-center h-[50px]    ">
+            <div className="settlingBorder flex flex-col  items-center justify-center px-5 lg:px-8 space-x-2 text-center h-[50px]    ">
               <span className="text-sm md:text-base whitespace-nowrap ">
                 Categories
               </span>

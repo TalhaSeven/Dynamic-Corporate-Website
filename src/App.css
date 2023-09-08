@@ -57,10 +57,15 @@ background-color: transparent !important;
 @media (max-width:300px) {
     .imgCircle{
         display: none;
-    }
+            }
     .settlingBorder,.perMonth,.settlingTeacher{
         padding: 0 !important;
     }
-       
+    .settlingWrapper{
+        margin-top: 20px;
+    }
+    .settlingBorder{
+        margin: 10px 0;
+    }
 }
 
