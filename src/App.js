@@ -11,6 +11,8 @@ import Settling from "./components/Settling";
 
 
 import Faq from "./components/Faq";
+import ContactForm from "./components/ContactForm";
+
 import Table from "./components/table/Table";
 
 
@@ -20,6 +22,7 @@ function App() {
       <Navbar />
       
       <Slider2 />
+      <ContactForm/>
 
        <Faq/>
       <SwiperOur />
