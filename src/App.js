@@ -14,6 +14,8 @@ import Faq from "./components/Faq";
 import ContactForm from "./components/ContactForm";
 
 import Table from "./components/table/Table";
+import Programs from "./components/programs/Programs";
+
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
       <SwiperOur />
       <Settling />
       <Table/>
+      <Programs/>
 
     </BrowserRouter>
   );
