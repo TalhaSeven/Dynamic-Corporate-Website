@@ -15,6 +15,11 @@ import Faq from "./components/Faq";
 import ContactForm from "./components/ContactForm";
 
 import Table from "./components/table/Table";
+
+import WayToLearn from "./components/WayToLearn";
+import BestFor from "./components/BestFor";
+import ProgramDetails from "./components/ProgramDetails";
+
 import Programs from "./components/programs/Programs";
 
 
@@ -30,6 +35,9 @@ function App() {
        <Faq/>
       <SwiperOur />
       <Settling />
+      <ProgramDetails/>
+      <BestFor/>
+
       <WayToLearn/>
       <Table/>
       <Programs/>
