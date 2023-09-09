@@ -1,0 +1,324 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+font-family: 'Fredoka', sans-serif;
+
+}
+
+.contactIconsParent{
+    padding: 5px;
+}
+
+.contactIcons{
+    width: 94%;
+    background-color: #fff6eb;
+    margin: auto;
+    margin-top: 25px;
+    font-size: 18px;
+    height: 250px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.contactIcons svg{
+    text-align: center;
+}
+
+.contactIcons:hover{
+    box-shadow: 2px 2px 2px #ff9c2493;
+}
+
+.phone svg{
+    background-color: #00bbae;
+}
+
+.map svg {
+    background-color: #ff9b24;
+}
+
+.email svg{
+    background-color: #ff577b;
+}
+
+.redStar{
+    color: red;
+}
+
+.sendBtn {
+    background-color: #ff9b24;
+    /* margin-bottom: 20px; */
+}
+
+.contactMapDiv{
+    margin-top: 30px;
+    
+}
+
+.contactMap {
+    height: 400px;
+    width: 94%;
+    border-radius: 30px;
+
+}
+
+.contactForm{
+    width: 94%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+
+.contactForm input{
+    border-radius: 20px;
+}
+
+.contactForm select{
+    border-radius: 20px;
+}
+
+.contactForm textarea{
+    border-radius: 20px;
+}
+
+
+
+@media screen and (min-width:576px) {
+    .contactIcons{
+        max-width: 500px;
+    }
+
+}
+@media screen and (min-width:768px) {
+    .contactIconsParent{
+        display: flex;
+        width: 80%;
+        margin: auto;
+        gap: 50px;
+    }
+
+
+    .contactIcons{
+        width: 220px;
+        height: 250px;
+    }
+
+    .contactForm{
+      
+        width: 80%;
+        height: 800px;
+        
+
+    }
+
+    .contactForm h2{
+        font-size: 32px;
+
+    }
+
+    .contactForm label{
+        font-size: 20px;
+    }
+
+    .nameEmailFlex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .phoneSubjectFlex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contactForm select{
+        width: 300px;
+        height: 60px;
+
+    }
+    .contactForm input{
+        width: 300px;
+        height: 60px;
+    }
+
+    .contactForm textarea{
+        height: 200px;
+
+    }
+    .contactForm #check{
+        width: 15px;
+        height: 15px;
+    }
+
+    .contactMapDiv{
+        height: 600px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .contactMap{
+        margin-top: 50px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .sendBtn{
+        font-size: 1.2rem;
+        padding: 1rem;
+        margin-top: 20px;
+    }
+
+
+}
+@media screen and (min-width:992px) {
+    .contactIcons{
+        width: 300px;
+        height: 240px;
+    }
+
+    .contactForm{
+        
+        height: 800px;
+        margin-bottom: 30px;
+    }
+
+    .contactMapDiv{
+        margin-top: 0;
+        width: 80%;
+    }
+
+    .contactMap{
+        width: 100%;
+    }
+
+    .contactForm select{
+        width: 425px;
+        height: 60px;
+
+    }
+    .contactForm input{
+        width: 425px;
+        height: 60px;
+    }
+
+    .contactForm textarea{
+        height: 200px;
+
+    }
+    .contactForm #check{
+        width: 15px;
+        height: 15px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .contactIcons{
+        width: 360px;
+        height: 250px;
+    }
+
+    .contactForm{
+        width: 49%;
+        height: 800px;
+    }
+
+  
+
+    .contactMapDiv{
+        width: 49%;
+        height: 800px;
+        /* margin-right: 40px; */
+        margin-top: 33px;
+    }
+
+    .contactMap{
+        width: 100%;
+        height: 100%;
+    }
+    .formMapDiv{
+        width: 80%;
+        height: 950px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .nameEmailFlex{
+        gap: 20px;
+    }
+
+    .phoneSubjectFlex{
+        gap: 20px;
+    }
+
+    .contactForm select{
+        width: 180px;
+        height: 60px;
+
+    }
+    .contactForm input{
+        width: 180px;
+        height: 60px;
+    }
+
+    .contactForm textarea{
+        height: 200px;
+
+    }
+    .contactForm #check{
+        width: 15px;
+        height: 15px;
+    }
+}
+@media screen and (min-width:1400px) {
+    .contactIcons{
+        width: 420px;
+        height: 250px;
+    }
+
+    .contactForm{
+        width: 50%;
+        height: 800px;
+    }
+
+    .contactMapDiv{
+        width: 50%;
+        height: 800px;
+        margin-right: 0;
+    }
+
+    .contactMap{
+        width: 100%;
+        height: 100%;
+    }
+    .formMapDiv{
+        width: 80%;
+        height: 950px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        align-items: center;
+
+}
+
+.contactForm select{
+    width: 220px;
+    height: 60px;
+
+}
+.contactForm input{
+    width: 220px;
+    height: 60px;
+}
+
+
+}

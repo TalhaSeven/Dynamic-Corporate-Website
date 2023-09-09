@@ -3,7 +3,7 @@ import React from 'react'
  const Table = () => {
   return (
    <>
-   <div className='container'>
+   <div className='container p-8 lg:p-30'>
             <h2 className='text-[3rem] text-center'>Full Day with Learning</h2>
             <div className="container">
             <p className='text-[1.2rem] text-neutral-500 text-center'> With the help of teachers and the environment as the third teacher, students
