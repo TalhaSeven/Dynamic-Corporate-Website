@@ -6,7 +6,7 @@ function GalleryModal({ isOpen, onClose, content }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal">
+      <div className="modal rounded-md">
         <button className="modal-close-button" onClick={onClose}>
           Close
         </button>

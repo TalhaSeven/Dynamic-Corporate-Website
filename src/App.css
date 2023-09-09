@@ -69,17 +69,8 @@ background-color: transparent !important;
     }
 }
 
-.gallery-header {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    background-image: url(/public/image/breadcrumb-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .overlay {
-    background-color: rgba(5, 192, 179, 0.8);
-    padding: 9rem;
+    background-color: rgba(5, 192, 179, 0.7);
     border-radius: 0.5em;
 }
 .gallery-card{
