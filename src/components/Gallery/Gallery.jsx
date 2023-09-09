@@ -19,9 +19,6 @@ function Gallery() {
   return (
     <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-8 md:py-12 lg:py-16 bg-gradient-to-r from-[#fcfcfb] to-[#F1FCF8] font-fredoka">
       <div className="gallery-header">
-        <div className="gallery-background-image">
-          <img src="/public/image/breadcrumb-bg.jpg" alt="Background" />
-        </div>
         <div className="overlay">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-6xl font-semibold mb-3 sm:mb-5 md:mb-7 whitespace-nowrap text-center gallery-title">
             Galeri
