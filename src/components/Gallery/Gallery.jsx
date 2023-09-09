@@ -17,7 +17,7 @@ function Gallery() {
   };
 
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-8 md:py-12 lg:py-16 bg-gradient-to-r from-[#fcfcfb] to-[#F1FCF8] font-fredoka">
+    <div className="sm:px-8 md:px-12 py-8 md:py-12 lg:py-16 bg-gradient-to-r from-[#fcfcfb] to-[#F1FCF8] font-fredoka">
       <div className="rounded-xl relative overlay"    
       style={{
         backgroundImage: 'url("./image/breadcrumb-bg.jpg")',
@@ -48,8 +48,7 @@ function Gallery() {
           </div>
         </div>
       </div>
-      <br />
-      <div className="overflow-hidden rounded-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2">
+      <div className="overflow-hidden rounded-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-5 p-2">
         {ImageList.map((image) => (
           <div key={image.id} className="gallery-card">
             <img
