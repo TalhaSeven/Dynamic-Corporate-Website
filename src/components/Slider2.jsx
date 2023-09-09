@@ -15,7 +15,7 @@ const Slider2 = () => {
       data-te-carousel-init=""
       data-te-ride="carousel"
     >
- {/*Carousel items*/}
+      {/*Carousel items*/}
       <div className="carousel-items relative w-full  overflow-hidden after:clear-both after:block after:content-[''] ">
         {/*First item*/}
         <div
@@ -30,7 +30,6 @@ const Slider2 = () => {
               <Link to="#">Admission Open 22-23</Link>
             </div>
           </div>
-
           <img
             src="{slider3}"
             className="img1 block w-full h-full display"
