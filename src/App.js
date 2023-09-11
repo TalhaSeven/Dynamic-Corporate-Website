@@ -21,6 +21,7 @@ import BestFor from "./components/BestFor";
 import ProgramDetails from "./components/ProgramDetails";
 
 import Programs from "./components/programs/Programs";
+import BreadCrumb from "./components/BreadCrumb";
 
 
 
@@ -42,7 +43,7 @@ function App() {
       <WayToLearn/>
       <Table/>
       <Programs/>
-
+    <BreadCrumb/>
     </BrowserRouter>
   );
 }
