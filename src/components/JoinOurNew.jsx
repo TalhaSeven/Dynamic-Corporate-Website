@@ -3,6 +3,7 @@ import React from "react";
 const JoinOurNew = () => {
   return (
     <>
+
       <div className=" relative font-fredoka h-[420px]  md:h-[350px]">
         <div className="w-full h-full">
           <img
@@ -37,22 +38,26 @@ const JoinOurNew = () => {
             it's a query about the world around us or a challenge.
           </p>
           <div className="mt-4 font-semibold ">
+
             <a
               href="about.html"
               className="text-[14px] bg-[#FF9B24] hover:bg-[#FFF] overflow-hidden block w-30 px-4 relative group xs:px-8 py-5 rounded-3xl text-white  duration-900 "
             >
               <span className="absolute left-6 bottom-2.5 group-hover: group-hover:left-6 group-hover:bottom-10 duration-500 ">
-                Apply Now
+
+              Apply Now
               </span>
               <span className="opacity-0 absolute left-6 -bottom-3.5  group-hover:-translate-y-6   group-hover:opacity-100 duration-500 group-hover:text-[#FF9B24]">
-                Apply Now
+              Apply Now
               </span>
             </a>
           </div>
-        </div>
       </div>
-      <div className="bg-[#FF9B24] h-[8px]"></div>
+    </div>
+    <div className="bg-[#FF9B24] h-[8px]"></div>
     </>
+    
+
   );
 };
 
