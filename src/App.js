@@ -8,8 +8,6 @@ import { BrowserRouter } from "react-router-dom";
 import SwiperOur from "./components/SwiperOur";
 
 import Settling from "./components/Settling";
-import WayToLearn from "./components/WayToLearn";
-
 
 import Faq from "./components/Faq";
 import ContactForm from "./components/ContactForm";
@@ -21,27 +19,28 @@ import BestFor from "./components/BestFor";
 import ProgramDetails from "./components/ProgramDetails";
 
 import Programs from "./components/programs/Programs";
-
-
+import Footer2 from "./components/Footer2";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      
-      <Slider2 />
-      <ContactForm/>
 
-       <Faq/>
+      <Slider2 />
+      <ContactForm />
+
+      <Faq />
       <SwiperOur />
       <Settling />
-      <ProgramDetails/>
-      <BestFor/>
+      <ProgramDetails />
+      <BestFor />
 
-      <WayToLearn/>
-      <Table/>
-      <Programs/>
-
+      <WayToLearn />
+      <Table />
+      <Programs />
+      <Footer />
+      <Footer2 />
     </BrowserRouter>
   );
 }
