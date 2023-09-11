@@ -95,7 +95,9 @@ const Settling = () => {
           </div>
         </div>
         <div className=" basis-1/2 bg-[#FFF6EB]  flex flex-col justify-between rounded-3xl p-5 min-h-[400px] md:max-h-[440px] lg:h-[496px]">
-          <h3 className="text-3xl sm:text-4xl font-semibold pt-1 sm:pt-2">Settling</h3>
+          <h3 className="text-3xl sm:text-4xl font-semibold pt-1 sm:pt-2">
+            Settling
+          </h3>
           <p className="font-normal lg:font-light text-[15px] lg:min-h-[80px] py-2 lg:py-0">
             The foundation of the Montessori philosophy is based upon the idea
             that children should work at their own pace, according to their own
@@ -120,7 +122,9 @@ const Settling = () => {
                   <span className="text-light text-sm md:text-base whitespace-nowrap ">
                     Settling Teacher
                   </span>
-                  <span className="text-xl font-semibold whitespace-nowrap">Alexia Honix</span>
+                  <span className="text-xl font-semibold whitespace-nowrap">
+                    Alexia Honix
+                  </span>
                 </div>
               </div>
             </div>
@@ -128,13 +132,17 @@ const Settling = () => {
               <span className="text-sm md:text-base whitespace-nowrap ">
                 Categories
               </span>
-              <span className="text-xl font-semibold whitespace-nowrap">Kindergarten</span>
+              <span className="text-xl font-semibold whitespace-nowrap">
+                Kindergarten
+              </span>
             </div>
             <div className="perMonth flex flex-col items-center space-x-2 text-center ps-2">
               <span className="text-sm md:text-base whitespace-nowrap  ">
                 Per/Month
               </span>
-              <span className="text-xl font-semibold whitespace-nowrap">$160.00</span>
+              <span className="text-xl font-semibold whitespace-nowrap">
+                $160.00
+              </span>
             </div>
           </div>
         </div>
