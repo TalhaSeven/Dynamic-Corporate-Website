@@ -19,7 +19,9 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Slider2 />
+
+      <h1>Buraya bir şey eklemeyin arkadaşlar</h1>
+      {/* <Slider2 />
       <ContactForm />
       <Faq />
       <SwiperOur />
@@ -29,7 +31,7 @@ function App() {
       <WayToLearn />
       <Table />
       <Programs />
-      <Gallery/>
+      <BreadCrumb /> */}
     </BrowserRouter>
   );
 }
