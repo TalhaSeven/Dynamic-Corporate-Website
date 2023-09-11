@@ -16,6 +16,7 @@ import ContactForm from "./components/ContactForm";
 
 import Table from "./components/table/Table";
 import Programs from "./components/programs/Programs";
+import OurTeachers from "./components/OurTeachers";
 
 
 
@@ -33,6 +34,7 @@ function App() {
       <WayToLearn/>
       <Table/>
       <Programs/>
+      <OurTeachers/>
 
     </BrowserRouter>
   );
