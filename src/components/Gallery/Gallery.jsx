@@ -18,13 +18,14 @@ function Gallery() {
 
   return (
     <div className="sm:px-8 md:px-12 py-8 md:py-12 lg:py-16 bg-gradient-to-r from-[#fcfcfb] to-[#F1FCF8] font-fredoka">
-      <div className="rounded-xl relative overlay"    
+      <div className="rounded-xl overlay overflow-hidden"    
       style={{
         backgroundImage: 'url("./image/breadcrumb-bg.jpg")',
         backgroundSize: "center",
         backgroundRepeat:"no-repeat",
+        backgroundPosition:"top",
         width: "100%",
-        height: "356px"}}>
+        }}>
         <div className="overlay py-30 text-white">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-6xl font-semibold mb-3 sm:mb-5 md:mb-7 whitespace-nowrap text-center gallery-title">
             Galeri
