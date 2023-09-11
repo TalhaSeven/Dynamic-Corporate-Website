@@ -15,6 +15,7 @@ import ContactForm from "./components/ContactForm";
 
 import Table from "./components/table/Table";
 import Programs from "./components/programs/Programs";
+import WayToLearn from "./components/WayToLearn";
 
 
 
