@@ -44,12 +44,12 @@ const HomeSlider2 = () => {
 
       <div
         style={{ backgroundImage: `url(${homeSlides[currentIndex].url})` }}
-        className="w-full h-full bg-right bg-cover duration-500"
-      >
-        {/* linear gradient  */}
-      </div>
+        className="w-full h-full bg-right bg-cover duration-300"
+      ></div>
 
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black via-transparent to-transparent opacity-70"></div>
+      {/* linear gradient  */}
+
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black via-black to-transparent opacity-70"></div>
 
       {/* content map started */}
 
@@ -60,7 +60,7 @@ const HomeSlider2 = () => {
         <h1 className="w-[70%] m-auto sm:m-0 text-[40px] sm:text-[50px]  md:text-[60px] lg:text-[70px] xl:text-[90px] 2xl:text-[110px] font-semibold mt-3">
           {homeSlides[currentIndex].h1}
         </h1>
-        <button className="bg-[#ff9b24] xl:text-[20px] font-semibold hover:bg-blue-700 transition duration-300 ease-in-out rounded-full px-5 py-3 mt-10">
+        <button className="bg-[#ff9b24] xl:text-[20px] font-semibold hover:bg-blue-500  transition duration-300 ease-in-out rounded-full px-5 py-3 mt-10">
           {homeSlides[currentIndex].button}
         </button>
       </div>
