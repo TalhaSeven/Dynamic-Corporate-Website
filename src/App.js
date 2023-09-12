@@ -26,11 +26,15 @@ function App() {
       <Faq />
       <SwiperOur />
       <Settling />
+
+      <WayToLearn/>
+      <Table/>
+      <Programs/>
+      <OurTeachers/>
+
+
       <ProgramDetails />
       <BestFor />
-      <WayToLearn />
-      <Table />
-      <Programs />
       <Gallery/>
       <BreadCrumb /> */}
     </BrowserRouter>

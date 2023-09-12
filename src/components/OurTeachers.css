@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ourTeacherSwiper {
+    width: 90%;
+    height: 550px;
+    margin: auto;
+
+  }
+  
+  .ourTeacherSlide {
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    /* background-color: #ff9b24; */
+   }
+  
+  .ourTeacherSlide img {
+    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 30px;
+  }
+
+  .slideContent{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    background: linear-gradient(106deg, rgba(235,255,253,1) 0%, rgba(253,246,236,1) 100%);
+    border-radius: 30px;
+  }
+  .slideContent .contentName{
+    margin: 15px 0;
+  }
+
+  .slideContent .contentJob{
+    margin: 15px 0;
+  }
+  
+  .slideSocialIcons{
+    display: none;
+    /* background-color: #ff9b24;
+   border-radius: 0 0 30px 30px ;
+   color: white;*/
+   transition:all 0.3s ease; 
+  }
+
+  .slideContent:hover .slideSocialIcons{
+    display: block;
+    background-color: #ff9b24;
+    border-radius: 0 0 30px 30px ;
+    color: white;
+    /* transition:all 0.5s; */
+  }
+
+  .slideSocialIcons i{
+    margin: 13px;
+  }
+
+  .swiperHeader{
+    text-align: center;
+    margin: auto;
+    width: 90%;
+  }
+  .swiperHeader h1{
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+     }
+
+  .swiperHeader p{
+    font-size: 16px;
+  }
+
+  .contentName{
+    font-size: 23px;
+    font-weight: 600;
+  }
+  .contentJob{
+font-size: 16px;
+
+  }
+
+
+  /* media query */
+
+
+  @media  screen and (min-width:576px) {
+    .swiperHeader h1{
+        font-size: 40px;
+       }
+
+         .swiperHeader p{
+            font-size: 18px;
+         }
+
+         .swiperParentDiv{
+            width: 100%;
+            margin: auto;
+         }
+
+         .ourTeacherSwiper {
+           width: 100%;
+           }
+    
+  }
+  @media  screen and (min-width:768px) {
+    .swiperParentDiv{
+        width: 100%;
+     }
+    
+  }
+  @media  screen and (min-width:992px) {
+
+    .swiperHeader{
+        width: 70%;
+    }
+    .swiperHeader h1{
+        font-size: 50px;
+       
+       
+         }
+
+         .swiperParentDiv{
+            width: 90%;
+         }
+    
+  }
+  @media  screen and (min-width:1200px) {
+    .swiperHeader{
+        width: 70%;
+    }
+    .swiperHeader h1{
+        font-size: 60px;
+       }
+
+     
+        
+    
+  }
+  @media  screen and (min-width:1400px) {
+    .swiperHeader{
+        width: 50%;
+    }
+    .swiperHeader h1{
+        font-size: 70px;
+       }
+
+       .swiperHeader p{
+        font-size: 20px;
+       }
+
+    }
+
+    @media  screen and (min-width:1600px) {
+
+        .swiperParentDiv{
+            width: 70%;
+         }
+    }
