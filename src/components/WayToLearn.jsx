@@ -40,7 +40,7 @@ const WayToLearn = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row max-w-[1320px] px-5 sm:px-30 py-30  space-y-5 lg:space-y-0 lg:space-x-5 mx-auto font-fredoka">
-      <div className="basis-1/2 lg:min-h-[380px]  max-h-[470px]">
+        <div className="basis-1/2 lg:min-h-[380px]  max-h-[470px]">
           <img
             src="./image/details-1.jpg"
             alt="wayToLearn"
@@ -75,7 +75,6 @@ const WayToLearn = () => {
             </a>
           </div>
         </div>
-        
       </div>
     </>
   );

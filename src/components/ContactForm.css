@@ -138,12 +138,12 @@ font-family: 'Fredoka', sans-serif;
     }
 
     .contactForm select{
-        width: 300px;
+        width: 230px;
         height: 60px;
 
     }
     .contactForm input{
-        width: 300px;
+        width: 230px;
         height: 60px;
     }
 
@@ -198,12 +198,12 @@ font-family: 'Fredoka', sans-serif;
     }
 
     .contactForm select{
-        width: 425px;
+        width: 300px;
         height: 60px;
 
     }
     .contactForm input{
-        width: 425px;
+        width: 300px;
         height: 60px;
     }
 
@@ -311,7 +311,7 @@ font-family: 'Fredoka', sans-serif;
 }
 
 .contactForm select{
-    width: 220px;
+    width: 220px;  
     height: 60px;
 
 }
@@ -320,5 +320,14 @@ font-family: 'Fredoka', sans-serif;
     height: 60px;
 }
 
+}
 
+@media screen and (min-width:1500px) {
+    .contactForm select{
+        width: 250px;
+    }
+
+    .contactForm input {
+width: 250px;
+    }
 }
