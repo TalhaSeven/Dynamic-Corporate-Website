@@ -3,6 +3,7 @@ import "swiper/css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 
+// import Gallery from "./components/Gallery/Gallery";
 // import Slider2 from "./components/Slider2";
 // import SwiperOur from "./components/SwiperOur";
 // import Settling from "./components/Settling";
@@ -19,7 +20,6 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
       <h1>Buraya bir şey eklemeyin arkadaşlar</h1>
       {/* <Slider2 />
       <ContactForm />
@@ -31,6 +31,7 @@ function App() {
       <WayToLearn />
       <Table />
       <Programs />
+      <Gallery/>
       <BreadCrumb /> */}
     </BrowserRouter>
   );
