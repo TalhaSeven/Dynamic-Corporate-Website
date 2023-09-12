@@ -8,14 +8,13 @@ import SwiperOur from "./components/SwiperOur";
 import Settling from "./components/Settling";
 import WayToLearn from "./components/WayToLearn";
 
-
 import Faq from "./components/Faq";
 import ContactForm from "./components/ContactForm";
 
 import Table from "./components/table/Table";
 import Programs from "./components/programs/Programs";
 import OurTeachers from "./components/OurTeachers";
-
+import HomeSlider2 from "./components/HomeSlider2";
 
 // import Slider2 from "./components/Slider2";
 // import SwiperOur from "./components/SwiperOur";
@@ -51,6 +50,7 @@ function App() {
       <BestFor />
       <BreadCrumb /> */}
 
+      <HomeSlider2 />
     </BrowserRouter>
   );
 }
