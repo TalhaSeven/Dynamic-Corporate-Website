@@ -86,6 +86,7 @@ background-color: transparent !important;
         transform: translateY(-20%) ;
         
     }
+}
 
 .overlay {
     background-color: rgba(5, 192, 179, 0.7);
