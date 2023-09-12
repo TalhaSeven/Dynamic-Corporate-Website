@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Collapse, initTE } from "tw-elements";
-initTE({ Collapse });
 
 const Faq = () => {
   useEffect(() => {
@@ -11,9 +10,10 @@ const Faq = () => {
     <div className="bg-white flex flex-col lg:flex-row max-w-[1320px] px-5 sm:px-30 py-30  space-y-5 lg:space-y-0 lg:space-x-5 mx-auto font-fredoka">
       <div className="basis-1/2 p-10 md:min-h-[380px]  rounded-3xl flex flex-col space-y-5 lg:space-y-8">
         <h2 className="text-[23px] md:text-[35px] lg:text-[40px] xl:text-5xl font-semibold mb-3 whitespace-nowrap text-center">
-          Know More <br />About Kindedo
+          Know More <br />
+          About Kindedo
         </h2>
-        <div id="accordionFlushExample" >
+        <div id="accordionFlushExample">
           <div className="w-full rounded-t-lg border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
             <h2 className="mb-0" id="flush-headingOne">
               <button
@@ -149,7 +149,11 @@ const Faq = () => {
         </div>
       </div>
       <div className="basis-1/2 p-10 md:min-h-[380px]  rounded-3xl flex flex-col space-y-5 lg:space-y-8">
-        <img src="./image/1.jpg" alt="kids" className="block  w-full  max-h-[400px]  md:max-h-[440px] lg:h-[496px] object-cover rounded-3xl" />
+        <img
+          src="./image/1.jpg"
+          alt="kids"
+          className="block  w-full  max-h-[400px]  md:max-h-[440px] lg:h-[496px] object-cover rounded-3xl"
+        />
       </div>
     </div>
   );
