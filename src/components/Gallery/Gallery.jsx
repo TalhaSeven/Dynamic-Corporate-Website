@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ImageList from "./ImageList.js";
 import GalleryModal from "./GalleryModal.jsx";
 
