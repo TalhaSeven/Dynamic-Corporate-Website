@@ -3,20 +3,7 @@ import "swiper/css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 
-import SwiperOur from "./components/SwiperOur";
-
-import Settling from "./components/Settling";
-import WayToLearn from "./components/WayToLearn";
-
-
-import Faq from "./components/Faq";
-import ContactForm from "./components/ContactForm";
-
-import Table from "./components/table/Table";
-import Programs from "./components/programs/Programs";
-import OurTeachers from "./components/OurTeachers";
-
-
+// import OurTeachers from "./components/OurTeachers";
 // import Slider2 from "./components/Slider2";
 // import SwiperOur from "./components/SwiperOur";
 // import Settling from "./components/Settling";
@@ -28,6 +15,7 @@ import OurTeachers from "./components/OurTeachers";
 // import ProgramDetails from "./components/ProgramDetails";
 // import Programs from "./components/programs/Programs";
 // import BreadCrumb from "./components/BreadCrumb";
+import Parentsays from "./components/Parentsays";
 
 function App() {
   return (
@@ -50,7 +38,7 @@ function App() {
       <ProgramDetails />
       <BestFor />
       <BreadCrumb /> */}
-
+      <Parentsays />
     </BrowserRouter>
   );
 }
