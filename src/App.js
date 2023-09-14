@@ -2,6 +2,7 @@ import "./App.css";
 import "swiper/css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
+import HomeSlider2 from "./components/HomeSlider2";
 
 // import Gallery from "./components/Gallery/Gallery";
 // import Slider2 from "./components/Slider2";
