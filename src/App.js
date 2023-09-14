@@ -25,8 +25,8 @@ function App() {
       <Navbar />
       <h1>Buraya bir şey eklemeyin arkadaşlar</h1>
 
-           <Footer/>
-           <Footer2/>
+      <Footer />
+      <Footer2 />
       {/* <Slider2 />
       <ContactForm />
       <Faq />
@@ -43,6 +43,7 @@ function App() {
       <BestFor />
       <Gallery/>
       <BreadCrumb /> */}
+      <HomeSlider2 />
     </BrowserRouter>
   );
 }

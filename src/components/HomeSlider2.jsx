@@ -1,10 +1,11 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const HomeSlider2 = () => {
   const [sliderData, setSliderData] = useState([]);
+  const homeSliderAutoInterval = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,12 +45,24 @@ const HomeSlider2 = () => {
     setCurrentIndex(newIndex);
   };
 
+  const homeSliderAuto = () => {
+    homeSliderAutoInterval.current = setInterval(() => {
+      nextSlide();
+    }, 3000); // Change slide every 5 seconds (adjust as needed)
+  };
+
+  useEffect(() => {
+    homeSliderAuto();
+  }, []);
+
   return (
     <div>
       {sliderData.map((slide, index) => (
         <div
           key={index}
-          className="m-0 p-0 box-border  h-[450px] sm:h-[600px] lg:h-[700px] xl:h-[750px] 2xl:h-[820px] w-full  relative"
+          className={`${
+            index === currentIndex ? "block" : "hidden"
+          } m-0 p-0 box-border  h-[450px] sm:h-[600px] lg:h-[700px] xl:h-[750px] 2xl:h-[820px] w-full  relative`}
         >
           <div
             style={{ backgroundImage: `url(${slide.image})` }}
