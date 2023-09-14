@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // Initialization for ES Users
 import {
     Collapse,
@@ -6,12 +6,31 @@ import {
     initTE,
   } from "tw-elements";
 import NavbarTop from './NavbarTop';
+import MenuNavbar from './MenuNavbar';
+import axios from 'axios';
 
   initTE({ Collapse, Dropdown });
 
 
 
 const Navbar = () => {
+const [menu, setMenu] = useState([])
+
+const menuFunction =async()=>{
+  const url="https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
+  try {
+   const {data} =await axios(url)
+   setMenu(data)
+   console.log(data)
+  } catch (error) {
+    console.log(error)  
+  }
+}
+useEffect(() => {
+  menuFunction()
+}, [])
+
+
   return (
     <>
   <NavbarTop/>
@@ -68,32 +87,15 @@ const Navbar = () => {
           className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
           data-te-navbar-nav-ref=""
         >
-          <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="" data-dropdown>
-            {/* Dashboard link */}
-            <a
-              className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-nonelg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
-              href="#"
-              data-te-nav-link-ref=""
-            >
-              Home
-            </a>
-            <div className="dropdown">
-            <ul className='list-style-none' data-te-navbar-nav-ref="">
-              <li><a href="#">home1</a>
-                <div className="dropdown">
-                  <ul className='list-style-none' data-te-navbar-nav-ref="">
-                    <li><a href="#">homex</a></li>
-                    <li><a href="#">homey</a></li>
-                  </ul>
-                  </div>
-                  </li>
-              <li><a href="#">home2</a></li>
-              <li><a href="#">home3</a></li>
-            </ul>
-            </div>
-          </li>
+       {menu.map((item, index) => <MenuNavbar item={item} key={index}/> )}
+       
+
+
+
+
+
           {/* Team link */}
-          <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+          {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
             <a
               className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
               href="#"
@@ -103,7 +105,7 @@ const Navbar = () => {
             </a>
           </li>
           {/* Projects link */}
-          <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+          {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
             <a
               className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
               href="#"
@@ -111,8 +113,8 @@ const Navbar = () => {
             >
               Programs
             </a>
-          </li>
-          <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+          </li> */}
+          {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
             <a
               className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
               href="#"
@@ -120,9 +122,9 @@ const Navbar = () => {
             >
               Contact
             </a>
-          </li>
+          </li> */}
         </ul>
-      </div>
+      </div> 
       {/* Right elements */}
       <div className="relative flex items-center">     
         <button

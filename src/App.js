@@ -2,21 +2,7 @@ import "./App.css";
 import "swiper/css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
-<<<<<<< HEAD
-import SwiperOur from "./components/SwiperOur";
 
-import Settling from "./components/Settling";
-
-
-import Faq from "./components/Faq";
-import ContactForm from "./components/ContactForm";
-
-import Table from "./components/table/Table";
-import Programs from "./components/programs/Programs";
-import WayToLearn from "./components/WayToLearn";
-
-=======
->>>>>>> main
 
 // import Slider2 from "./components/Slider2";
 // import SwiperOur from "./components/SwiperOur";
