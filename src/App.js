@@ -3,11 +3,13 @@ import "swiper/css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 
-
+// import Gallery from "./components/Gallery/Gallery";
 // import Slider2 from "./components/Slider2";
 // import SwiperOur from "./components/SwiperOur";
 // import Settling from "./components/Settling";
-// import WayToLearn from "./components/WayToLearn";
+import WayToLearn from "./components/WayToLearn";
+import Footer from "./components/Footer";
+import Footer2 from "./components/Footer2";
 // import Faq from "./components/Faq";
 // import ContactForm from "./components/ContactForm";
 // import Table from "./components/table/Table";
@@ -20,18 +22,25 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
       <h1>Buraya bir şey eklemeyin arkadaşlar</h1>
+
+           <Footer/>
+           <Footer2/>
       {/* <Slider2 />
       <ContactForm />
       <Faq />
       <SwiperOur />
       <Settling />
+
+      <WayToLearn/>
+      <Table/>
+      <Programs/>
+      <OurTeachers/>
+
+
       <ProgramDetails />
       <BestFor />
-      <WayToLearn />
-      <Table />
-      <Programs />
+      <Gallery/>
       <BreadCrumb /> */}
     </BrowserRouter>
   );

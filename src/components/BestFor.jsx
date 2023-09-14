@@ -1,20 +1,23 @@
 import React from "react";
-import "./button.css";
 
 const BestFor = () => {
   return (
     <main>
       <section>
-        <div className="bg-white flex justify-center items-center h-96 my-10 gap-10 flex-wrap">
-          <div>
+        <div
+          className="bg-white mx-auto justify-center items-center my-10 gap-10 container grid grid-col-1 sm:grid sm:grid-cols-2 font-fredoka  font-semibold
+"
+        >
+          <div className="justify-center flex">
             <img
-              src="images/kids.jpg"
+              /*   src="images/kids.jpg"*/
+              src="https://playtolearnpreschool.us/wp-content/uploads/2015/05/FEATURED-SQUARED-2.png"
               alt=""
-              className="rounded-full w-96 h-80 object-fill shadow-3xl"
+              className="rounded-full h-80 object-fill shadow-3xl "
             />
           </div>
 
-          <div className="w-96 bg-white p-2">
+          <div className="w-96 bg-white mx-auto ">
             <div>
               {" "}
               <h1 className="text-4xl font-bold my-4">Best For Your Kids</h1>
@@ -62,7 +65,7 @@ const BestFor = () => {
               </div>
               <div className="flex gap-2 bg-white">
                 <i class="fa-solid fa-chevron-right text-xs bg-teal-400 rounded-full text-center w-4 h-4 text-cyan-700"></i>
-                <p className="text-4xs font">
+                <p className="text-4xs font-thin">
                   Teachers make a difference of your child.
                 </p>
               </div>
