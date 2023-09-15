@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "swiper": "^10.2.0",
     "tw-elements": "^1.0.0-rc.1",
+    "tw-elements-react": "^1.0.0-alpha1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

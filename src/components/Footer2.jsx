@@ -11,7 +11,7 @@ const Footer2 = () => {
       <div className="mt-10">
         <div className="flex  gap-2 justify-center">
           <div className="text-center">
-            <i class="fa-solid fa-book-open text-5xl text-[#FF9B24]"></i>
+            <i className="fa-solid fa-book-open text-5xl text-[#FF9B24]"></i>
           </div>
 
           <div className="text-[#09b1a5] font-bold text-xl">
@@ -25,13 +25,13 @@ const Footer2 = () => {
         </div>
         <div className="flex gap-10 item justify-center ">
           <div className="rounded-full bg-[#09b1a5] h-11 w-11 text-center pt-2 text-white font-extrabold hover:bg-[#FF9B24] cursor-pointer transform transition-colors duration-300">
-            <i class="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-facebook-f"></i>
           </div>
           <div className="rounded-full bg-[#09b1a5] h-11 w-11 text-center pt-2 text-white font-extrabold  hover:bg-[#FF9B24] cursor-pointer transform transition-colors duration-300">
-            <i class="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-twitter"></i>
           </div>
           <div className="rounded-full bg-[#09b1a5] h-11 w-11 text-center pt-2 text-white font-extrabold  hover:bg-[#FF9B24] cursor-pointer transform transition-colors duration-300">
-            <i class="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-youtube"></i>
           </div>
         </div>
       </div>
@@ -61,15 +61,15 @@ const Footer2 = () => {
         <h1 className="text-2xl mb-10 font-bold text-center">Contact Us</h1>
         <ul className="gap-3 flex flex-col items-center">
           <li className="flex gap-2 items-center hover:text-[#FF9B24] cursor-pointer">
-            <i class="fa-solid fa-location-dot "></i>
+            <i className="fa-solid fa-location-dot "></i>
             <p>14/A, Kilix Home Tower, NYC</p>
           </li>
           <li className="flex gap-2 items-center  hover:text-[#FF9B24] cursor-pointer">
-            <i class="fa-solid fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
             <div>907-200-3462</div>
           </li>
           <li className="flex gap-2 items-center  hover:text-[#FF9B24] cursor-pointer">
-            <i class="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-envelope"></i>
             <div>Support@kindedo.com</div>
           </li>
         </ul>

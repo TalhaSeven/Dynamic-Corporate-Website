@@ -32,7 +32,7 @@ const Footer = () => {
           rounded-3xl h-[70px] hover:bg-[#1dd1c5] "
           >
             <span>
-              <i class="fa-solid fa-location-arrow text-xl text-white"></i>
+              <i className="fa-solid fa-location-arrow text-xl text-white"></i>
             </span>
             <span className="ml-0 md:ml-2  font-normal text-white">Subscribe Now</span>
           </button>
