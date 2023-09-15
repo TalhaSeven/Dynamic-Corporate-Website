@@ -1,7 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Parentsays.css";
+import axios from "axios";
 
 const Parentsays = () => {
+  const [parentsays, setParentsays] = useState([]);
+
+  useEffect(() => {
+    const fetchDatas = async () => {
+      try {
+        const { data } = await axios.get(
+          "https://fuatmercan.com/kids/api/v1/page.php?slug=index&lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
+        );
+
+        const filteredData = data.filter(
+          (item) => item.modulName === "component5"
+        );
+
+        setParentsays(filteredData[0].data);
+        console.log(filteredData[0].data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchDatas();
+  }, []);
+
   // modal
   const [showVideo, setShowVideo] = useState(false);
 
@@ -22,7 +46,7 @@ const Parentsays = () => {
 
       <div className="modalImg  relative w-screen   flex items-center justify-center">
         <img
-          src="../image/testimonail-bg.9724f680.png" // Önizleme resmi URL'sini buraya ekleyin
+          src={parentsays.image} // Önizleme resmi URL'sini buraya ekleyin
           alt="Video Preview"
           className={`w-full h-full object-cover ${
             showVideo ? "hidden" : "block"
@@ -30,7 +54,7 @@ const Parentsays = () => {
         />
         {!showVideo && (
           <button
-            className="playBtn absolute  text-white rounded-full"
+            className="playBtn absolute  text-white rounded-full "
             onClick={toggleVideo}
           >
             <svg
@@ -64,7 +88,7 @@ const Parentsays = () => {
               </button>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src="https://www.youtube.com/embed/9YYxvVawZdI" // YouTube video URL'sini buraya ekleyin
+                  src={parentsays.videoUrl} // YouTube video URL'sini buraya ekleyin
                   title="YouTube Video"
                   allowFullScreen
                   className="absolute inset-0 w-full h-full"
@@ -86,9 +110,8 @@ const Parentsays = () => {
           >
             {/* İlk Sayfa */}
             <div className="pages w-full h-full   text-white ">
-              
-              <h1 className="text-4xl pt-20 mt-35 ps-5">Parents Says</h1>
-              <div className="starIcons flex mt-10 ms-5 text-xl gap-1 text-yellow-400">
+              <h1 className="text-4xl pt-20 mt-35 ps-5">{parentsays.title1}</h1>
+              <div className="starIcons flex mt-10 ms-5 text-xl gap-1 text-yellow-400  ">
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
@@ -112,7 +135,6 @@ const Parentsays = () => {
                 </div>
                 <i className="fa-solid fa-quote-right text-5xl "></i>
               </div>
-            
             </div>
           </div>
           <div
