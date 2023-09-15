@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TECollapse } from "tw-elements-react";
-import { data } from "../data.js"; // Veri kaynağını içe aktar.
+import  data  from "../data"; // Veri kaynağını içe aktar.
 
 const Faq = () => {
  
@@ -34,7 +34,7 @@ const Faq = () => {
         {other.map((item, index) => (
           <div
             key={index}
-            className="mb-3 rounded-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
+            className="mb-3 rounded-lg border border-neutral-200 bg-white"
           >
             <h2 className="mb-0" id={`heading${index}`}>
               {/* Soru başlığı */}
