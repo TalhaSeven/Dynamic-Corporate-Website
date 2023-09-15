@@ -50,104 +50,101 @@ const ContactForm = () => {
       {/* contact icons finished */}
 
       {/* contact form started */}
-<div className="formMapDiv">
-
-      <form className="contactForm mt-12 p-10 border m-3 rounded-xl">
-        <h2 className="text-3xl mr-5 mb-10 mt-5 ">Contact Us Right Here</h2>
-        <div className="nameEmailFlex">
-        <div className="mb-5">
-          <div>
-            <label htmlFor="name">
-              Name <span className="redStar ">*</span>
-            </label>
+      <div className="formMapDiv">
+        <form className="contactForm mt-12 p-10 border m-3 rounded-xl">
+          <h2 className="text-3xl mr-5 mb-10 mt-5 ">Contact Us Right Here</h2>
+          <div className="nameEmailFlex">
+            <div className="mb-5">
+              <div>
+                <label htmlFor="name">
+                  Name <span className="redStar ">*</span>
+                </label>
+              </div>
+              <input
+                type="text"
+                id="name"
+                className="outline-0 border rounded-md mt-2 w-full h-10"
+              />
+            </div>
+            <div className="mb-5">
+              <div>
+                <label htmlFor="email">
+                  Email <span className="redStar ">*</span>
+                </label>
+              </div>
+              <input
+                type="text"
+                id="email"
+                className="outline-0 border rounded-md mt-2 w-full h-10"
+              />
+            </div>
           </div>
-          <input
-            type="text"
-            id="name"
-            className="outline-0 border rounded-md mt-2 w-full h-10"
+
+          <div className="phoneSubjectFlex">
+            <div className="mb-5">
+              <div>
+                <label htmlFor="phone">
+                  Phone <span className="redStar ">*</span>
+                </label>
+              </div>
+              <input
+                type="text"
+                id="phone"
+                className="outline-0 border rounded-md mt-2 w-full h-10"
+              />
+            </div>
+            <div className="mb-5">
+              <div>
+                <label htmlFor="subject">
+                  Subject <span className="redStar ">*</span>
+                </label>
+              </div>
+              <select
+                id="subject"
+                className="outline-0 border rounded-md mt-2 w-full h-10"
+              >
+                <option value="selectSubject">Select Subject</option>
+                <option value="junior">Junior KG</option>
+                <option value="senior">Senior KG</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="mb-5">
+            <div>
+              <label htmlFor="comment">
+                Comment <span className="redStar ">*</span>
+              </label>
+            </div>
+            <textarea
+              name=""
+              id="comment"
+              className="outline-0 border rounded-md mt-2 w-full h-30"
+            ></textarea>
+          </div>
+
+          <div className="flex justify-start items-center gap-2 mb-5">
+            <input type="checkbox" id="check" />
+            <label htmlFor="check">Save Data for Next Comment</label>
+          </div>
+
+          <button className="sendBtn rounded-full text-white p-2 px-5 text-sm">
+            Send Now
+          </button>
+        </form>
+
+        {/* contact form finished */}
+
+        {/* map started */}
+
+        <div className="contactMapDiv">
+          <iframe
+            className="contactMap  border rounded-lg m-auto grayscale"
+            title="map"
+            src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
           />
         </div>
-        <div className="mb-5">
-          <div>
-            <label htmlFor="email">
-              Email <span className="redStar ">*</span>
-            </label>
-          </div>
-          <input
-            type="text"
-            id="email"
-            className="outline-0 border rounded-md mt-2 w-full h-10"
-          />
-        </div>
-        </div>
-       
-       <div className="phoneSubjectFlex">
-       <div className="mb-5">
-          <div>
-            <label htmlFor="phone">
-              Phone <span className="redStar ">*</span>
-            </label>
-          </div>
-          <input
-            type="text"
-            id="phone"
-            className="outline-0 border rounded-md mt-2 w-full h-10"
-          />
-        </div>
-        <div className="mb-5">
-          <div>
-            <label htmlFor="subject">
-              Subject <span className="redStar ">*</span>
-            </label>
-          </div>
-          <select
-            id="subject"
-            className="outline-0 border rounded-md mt-2 w-full h-10"
-          >
-            <option value="selectSubject">Select Subject</option>
-            <option value="junior">Junior KG</option>
-            <option value="senior">Senior KG</option>
-          </select>
-        </div>
-       </div>
-       
-        <div className="mb-5">
-          <div>
-            <label htmlFor="comment">
-              Comment <span className="redStar ">*</span>
-            </label>
-          </div>
-          <textarea
-            name=""
-            id="comment"
-            className="outline-0 border rounded-md mt-2 w-full h-30"
-          ></textarea>
-        </div>
-
-        <div className="flex justify-start items-center gap-2 mb-5">
-          <input type="checkbox" id="check" />
-          <label htmlFor="check">Save Data for Next Comment</label>
-        </div>
-
-        <button className="sendBtn rounded-full text-white p-2 px-5 text-sm">
-          Send Now
-        </button>
-      </form>
-
-      {/* contact form finished */}
-
-      {/* map started */}
-
-      <div className="contactMapDiv">
-        <iframe
-          className="contactMap  border rounded-lg m-auto grayscale"
-          title="map"
-          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-          
-        />
       </div>
-</div>
-
 
       {/* map finished */}
     </div>

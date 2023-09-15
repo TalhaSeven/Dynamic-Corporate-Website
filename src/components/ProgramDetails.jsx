@@ -2,7 +2,7 @@ import React from "react";
 
 const ProgramDetails = () => {
   return (
-    <div className="flex flex-wrap  justify-center gap-10 w-full h-72">
+    <div className="flex flex-wrap justify-center items-center gap-10  font-fredoka font-semibold">
       <div className="bg-[#fff6eb] w-52 mt-10 mb-10 rounded-3xl shadow-xl cursor-pointer shadow-orange-400 hover:shadow-orange-500 ">
         <div className="bg-[#2ec7bd] w-24 mt-6 rounded-3xl mx-auto mb-10 h-16 text-center">
           <i class="fa-solid fa-people-group mt-3 text-3xl text-gray-200"></i>
