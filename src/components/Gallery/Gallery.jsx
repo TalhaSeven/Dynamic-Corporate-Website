@@ -1,23 +1,27 @@
-import React, { useState } from "react";
-import ImageList from "./ImageList.js";
-import GalleryModal from "./GalleryModal.jsx";
+import { useState } from "react";
+import ImageList from "./ImageList.js"; // Resim listesi verileri
+import GalleryModal from "./GalleryModal.jsx"; // Galeri modal bileşeni
 
 function Gallery() {
+  // Modal durumu ve seçilen resmin indeksini saklayan state'ler
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  // Modal'ı açan fonksiyon
+  const openModal = (index) => {
+    setSelectedImageIndex(index);
     setModalOpen(true);
   };
 
+  // Modal'ı kapatan fonksiyon
   const closeModal = () => {
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
     setModalOpen(false);
   };
 
   return (
     <div className="sm:px-8 md:px-12 py-8 md:py-12 lg:py-16 bg-gradient-to-r from-[#fcfcfb] to-[#F1FCF8] font-fredoka">
+      {/* Galeri başlık ve arkaplan */}
       <div className="rounded-xl overlay overflow-hidden"    
       style={{
         backgroundImage: 'url("./image/breadcrumb-bg.jpg")',
@@ -27,10 +31,12 @@ function Gallery() {
         width: "100%",
         }}>
         <div className="overlay py-30 text-white">
+          {/* Galeri başlık */}
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-6xl font-semibold mb-3 sm:mb-5 md:mb-7 whitespace-nowrap text-center gallery-title">
             Galeri
           </h2>
           <div className="flex justify-center">
+            {/* Sayfa altındaki alt başlık */}
             <p className="font-light text-sm sm:text-base md:text-lg lg:text-xl flex gap-3">
               <span>
                 <svg
@@ -49,30 +55,34 @@ function Gallery() {
           </div>
         </div>
       </div>
+      {/* Resimlerin listesi */}
       <div className="overflow-hidden rounded-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-5 p-2">
-        {ImageList.map((image) => (
+      {ImageList.map((image, index) => (
           <div key={image.id} className="gallery-card">
+            {/* Resimleri tıklanabilir hale getiren fonksiyon */}
             <img
               src={image.src}
               alt={image.alt}
               className="h-full w-full hover:scale-95 duration-300 object-cover cursor-pointer"
-              onClick={() => openModal(image)}
+              onClick={() => openModal(index)} // Resme tıklama işlevi indeksi ile çağırılıyor
             />
           </div>
         ))}
       </div>
+      {/* Modal bileşeni */}
       <GalleryModal
         isOpen={modalOpen}
         onClose={closeModal}
         content={
-          selectedImage && (
+          selectedImageIndex !== null && (
             <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="modal-image"
+              src={ImageList[selectedImageIndex].src}
+              alt={ImageList[selectedImageIndex].alt}
             />
           )
         }
+        images={ImageList} // Tüm resimleri içeren dizi
+        setSelectedImageIndex={setSelectedImageIndex}
       />
     </div>
   );
