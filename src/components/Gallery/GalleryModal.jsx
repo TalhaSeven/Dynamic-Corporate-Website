@@ -70,17 +70,18 @@ function GalleryModal({
           {content} {/* İçerik burada görüntülenir */}
         </div>
       </div>
-      <button className="absolute top-2/4 left-0" onClick={handlePrevious}>
-        <span className="h-10 w-10">
+      <button className="absolute top-2/4 left-5 " onClick={handlePrevious}>
+        <span className="h-20 w-20 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="4"
             stroke="white"
-            className="h-10 w-10 transform rotate-90"
+            className="h-20 w-20 transform rotate-90 "
           >
             <path
+            className="hover:bg-red-400"
               strokeLinecap="round"
               strokeLinejoin="round"
               d="M19.5 8.25l-7.5 7.5-7.5-7.5"
@@ -88,15 +89,15 @@ function GalleryModal({
           </svg>
         </span>
       </button>
-      <button className="absolute top-2/4 right-0" onClick={handleNext}>
-        <span className="h-10 w-10">
+      <button className="absolute top-2/4 right-5 " onClick={handleNext}>
+        <span className="h-20 w-20">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="4"
             stroke="white"
-            className="h-10 w-10 transform -rotate-90"
+            className="h-20 w-20 transform -rotate-90"
           >
             <path
               strokeLinecap="round"

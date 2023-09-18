@@ -24,6 +24,7 @@ module.exports = {
     extend: {
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+        'custom': '0px 0px 15px rgba(5, 192, 179, 1)'
       },
       fontSize: {
         'xxs': '0.5rem', // Özel metin boyutunu ekleyin

@@ -1,18 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  langData: [],
+  loading: false,
+  error: false,
 }
+
 
 export const languageSlice = createSlice({
   name: 'language',
   initialState,
-  reducers: {
+  reducers: {},
 
-  },
 })
 
 // Action creators are generated for each case reducer function
-export const {  } = languageSlice.actions
+export const {} = languageSlice.actions
 
 export default languageSlice.reducer

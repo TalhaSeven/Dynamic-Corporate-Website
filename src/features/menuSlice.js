@@ -14,7 +14,6 @@ export const menuSlice = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { setMenu} = menuSlice.actions
 
 export default menuSlice.reducer
