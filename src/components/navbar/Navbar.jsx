@@ -9,8 +9,12 @@ import NavbarTop from './NavbarTop';
 import MenuNavbar from './MenuNavbar';
 // import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
+<<<<<<< HEAD
 //  import  {setMenu}  from '../../features/menuSlice';
 import { getMenu } from '../../features/menuSlice';
+=======
+
+>>>>>>> main
 
   initTE({ Collapse, Dropdown });
 
@@ -35,10 +39,16 @@ console.log(menu)
 //     console.log(error)  
 //   }
 // }
+<<<<<<< HEAD
 useEffect(() => {
   // menuFunction()
  dispatch(getMenu())
 }, [])
+=======
+// useEffect(() => {
+//   menuFunction()
+// }, [])
+>>>>>>> main
 
 
   return (
@@ -97,7 +107,11 @@ useEffect(() => {
           className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
           data-te-navbar-nav-ref=""
         >
+<<<<<<< HEAD
        {menu?.map((item, index) => <MenuNavbar item={item} key={index}/> )}
+=======
+       {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} key={index}/> ) }
+>>>>>>> main
        
 
 
