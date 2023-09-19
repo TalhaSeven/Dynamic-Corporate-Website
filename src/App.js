@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getMenuData(lang));
-    dispatch(getApiData({ page: "who-we-are", lang }));
+    dispatch(getApiData({ page: "index", lang }));
   }, [lang]);
 
   return (

@@ -8,7 +8,7 @@ export const getApiData = createAsyncThunk(
     const url = `https://fuatmercan.com/kids/api/v1/page.php?slug=${page}&lang=${lang}&token=${token}`
     try {
       const {data} = await axios(url)
-      return {data,page}
+      return data
     } catch (error) {
       console.log(error);
       return rejectWithValue("bir hata oluştu..")
@@ -18,10 +18,7 @@ export const getApiData = createAsyncThunk(
 
 
 const initialState = {
-  index:[],
-  courses:[],
-  contact:[],
-  ["who-we-are"]:[],
+  apiPageData:[],
   loading:false,
   error:false
 }
@@ -35,9 +32,9 @@ export const apiSlice = createSlice({
     .addCase(getApiData.pending, (state)=>{
       state.loading = true;
     })
-    .addCase(getApiData.fulfilled, (state, {payload:{data,page}}) => {
+    .addCase(getApiData.fulfilled, (state, {payload}) => {
       state.loading = false;
-      state[page] = data;
+      state.apiPageData = payload;
     })
     .addCase(getApiData.rejected, (state, {payload})=>{
       state.loading=false;
