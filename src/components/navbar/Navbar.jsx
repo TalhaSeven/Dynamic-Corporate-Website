@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 // Initialization for ES Users
-import { Collapse, Dropdown, initTE } from "tw-elements";
-import NavbarTop from "./NavbarTop";
-import MenuNavbar from "./MenuNavbar";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setMenu } from "../../features/menuSlice";
+import {
+    Collapse,
+    Dropdown,
+    initTE,
+  } from "tw-elements";
+import NavbarTop from './NavbarTop';
+import MenuNavbar from './MenuNavbar';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+
+
+  initTE({ Collapse, Dropdown });
+
 
 initTE({ Collapse, Dropdown });
 
@@ -14,7 +21,23 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { menu } = useSelector((state) => state.menu);
 
-  // console.log(menu)
+console.log(menu)
+
+
+// const menuFunction =async()=>{
+//   const url="https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
+//   try {
+//    const {data} =await axios(url)
+//    dispatch(setMenu(data))
+//   //  setMenu(data)
+//    console.log(data)
+//   } catch (error) {
+//     console.log(error)  
+//   }
+// }
+// useEffect(() => {
+//   menuFunction()
+// }, [])
 
   const menuFunction = async () => {
     const url =
@@ -51,29 +74,46 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            {/* Hamburger icon */}
-            <span className="[&>svg]:w-7">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-7 w-7"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-          </button>
-          {/* Collapsible navigation container */}
-          <div
-            className=" !visible menu hidden flex-grow basis-1 items-center sm:!flex lg:basis-auto"
-            id="navbarSupportedContent1"
-            data-te-collapse-item=""
-          >
-            {/* Logo */}
+            <path
+              fillRule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </span>
+      </button>
+      {/* Collapsible navigation container */}
+      <div
+        className=" !visible menu hidden flex-grow basis-1 items-center sm:!flex lg:basis-auto"
+        id="navbarSupportedContent1"
+        data-te-collapse-item=""
+      >
+        {/* Logo */}
+        <a
+          className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+          href="#"
+        >
+          <img
+            src="../images/logo.svg"
+            style={{ height: "50px" }}
+            alt="TE Logo"
+            loading="lazy"
+          />
+        </a>
+        {/* Left navigation links */}
+        <ul
+          className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
+          data-te-navbar-nav-ref=""
+        >
+       {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} key={index}/> ) }
+       
+
+
+
+
+
+          {/* Team link */}
+          {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
             <a
               className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
               href="#"
