@@ -2,7 +2,7 @@ import "./App.css";
 import "swiper/css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import { getMenuData } from "../../features/MenuSlice";
+import { getMenuData } from "./features/MenuSlice"
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getApiData } from "./features/ApiSlice";

@@ -39,21 +39,7 @@ console.log(menu)
 //   menuFunction()
 // }, [])
 
-  const menuFunction = async () => {
-    const url =
-      "https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c";
-    try {
-      const { data } = await axios(url);
-      dispatch(setMenu(data));
-      //  setMenu(data)
-      //  console.log(data)
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    menuFunction();
-  }, []);
+ 
 
   return (
     <>
@@ -74,6 +60,14 @@ console.log(menu)
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+                     {/* Hamburger icon */}
+                     <span className="[&>svg]:w-7">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-7 w-7"
+              >
             <path
               fillRule="evenodd"
               d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
@@ -107,7 +101,7 @@ console.log(menu)
         >
        {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} key={index}/> ) }
        
-
+      </ul>
 
 
 
@@ -126,14 +120,14 @@ console.log(menu)
               />
             </a>
             {/* Left navigation links */}
-            <ul
+            {/* <ul
               className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
               data-te-navbar-nav-ref=""
             >
               {menu.map((item, index) => (
                 <MenuNavbar item={item} key={index} />
               ))}
-            </ul>
+            </ul> */}
           </div>
           {/* Right elements */}
           <div className="relative flex items-center">
