@@ -21,8 +21,7 @@ const Content = () => {
 
   return (
     <div>
-        {(location.pathname.includes("index") || location.pathname === "/") &&
-        apiPageData?.length > 0 && apiPageData?.map((item,index)=> {
+        {apiPageData?.length > 0 && apiPageData?.map((item,index)=> {
           const {modulName} = item;
           switch (modulName) {
             case "slider":
