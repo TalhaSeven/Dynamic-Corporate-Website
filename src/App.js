@@ -21,6 +21,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
+        
         <Route path="/" element={<Content />} />
       </Routes>
     </BrowserRouter>
