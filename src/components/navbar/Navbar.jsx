@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// Initialization for ES Users
 import {
     Collapse,
     Dropdown,
@@ -7,39 +6,28 @@ import {
   } from "tw-elements";
 import NavbarTop from './NavbarTop';
 import MenuNavbar from './MenuNavbar';
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-
-
-  initTE({ Collapse, Dropdown });
+import { Link, useNavigate } from "react-router-dom";
+import { setLanguage } from "../../features/LanguageSlice";
+import { getApiData } from "../../features/ApiSlice";
 
 
 initTE({ Collapse, Dropdown });
 
 const Navbar = () => {
-  //  const [menu, setMenu] = useState([])
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { menu } = useSelector((state) => state.menu);
+  const { preferredLanguage:lang } = useSelector((state) => state.lang);
 
-console.log(menu)
 
-
-// const menuFunction =async()=>{
-//   const url="https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
-//   try {
-//    const {data} =await axios(url)
-//    dispatch(setMenu(data))
-//   //  setMenu(data)
-//    console.log(data)
-//   } catch (error) {
-//     console.log(error)  
-//   }
-// }
-// useEffect(() => {
-//   menuFunction()
-// }, [])
-
- 
+  const handleLanguage = (e) => {
+    dispatch(setLanguage(e.target.value));
+    dispatch(getApiData({page:"index", lang:e.target.value}))
+    navigate(`/${e.target.value}/index`)
+   
+  };
 
   return (
     <>
@@ -83,9 +71,9 @@ console.log(menu)
         data-te-collapse-item=""
       >
         {/* Logo */}
-        <a
+        <Link
           className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-          href="#"
+          to="/en/index"
         >
           <img
             src="../images/logo.svg"
@@ -93,41 +81,16 @@ console.log(menu)
             alt="TE Logo"
             loading="lazy"
           />
-        </a>
+        </Link>
         {/* Left navigation links */}
         <ul
           className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
           data-te-navbar-nav-ref=""
         >
-       {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} key={index}/> ) }
+       {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} lang={lang} key={index}/> ) }
        
       </ul>
 
-
-
-
-          {/* Team link */}
-          {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
-            <a
-              className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-              href="#"
-            >
-              <img
-                src="../images/logo.svg"
-                style={{ height: "50px" }}
-                alt="TE Logo"
-                loading="lazy"
-              />
-            </a>
-            {/* Left navigation links */}
-            {/* <ul
-              className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
-              data-te-navbar-nav-ref=""
-            >
-              {menu.map((item, index) => (
-                <MenuNavbar item={item} key={index} />
-              ))}
-            </ul> */}
           </div>
           {/* Right elements */}
           <div className="relative flex items-center">
@@ -139,6 +102,12 @@ console.log(menu)
             >
               Sign up for free
             </button>
+          </div>
+          <div className="">
+            <select value={lang} onChange={handleLanguage}>
+              <option value="en">English</option>
+              <option value="de">German</option>
+            </select>
           </div>
         </div>
       </nav>

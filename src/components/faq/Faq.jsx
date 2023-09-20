@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { TECollapse } from "tw-elements-react";
 import { useDispatch, useSelector } from "react-redux";
-import { homeAll } from "../../features/homeSlice";
+import { getApiData } from "../../features/ApiSlice";
 
 const Faq = () => {
   const dispatch = useDispatch();
-  const { pageData, error, loading } = useSelector((state) => state.home);
+  const { apiPageData, error, loading } = useSelector((state) => state.api);
   const [activeElement, setActiveElement] = useState(null);
-  const faqData = pageData?.filter((item) => item.modulName === "component2");
+  const faqData = apiPageData?.filter((item) => item.modulName === "component2");
   const title1 = faqData[0]?.data.title1 || "";
   const image = faqData[0]?.data.image || "";
   const other = faqData[0]?.data.other || [];
@@ -21,7 +21,7 @@ const Faq = () => {
   };
 
   useEffect(() => {
-    dispatch(homeAll());
+    dispatch(getApiData());
   }, []);
 
   return (

@@ -23,7 +23,7 @@ const SwiperOur = () => {
           spaceBetween={50}
           slidesPerView={3}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
+      
           onSlideChange={() => console.log("slide change")}
           breakpoints={{
             1200: {
