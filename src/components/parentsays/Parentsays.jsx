@@ -17,7 +17,7 @@ const Parentsays = () => {
         );
 
         setParentsays(filteredData[0].data);
-        console.log(filteredData[0].data);
+   
       } catch (error) {
         console.log(error);
       }
@@ -146,11 +146,11 @@ const Parentsays = () => {
             <div className="pages w-full h-full   text-white ">
               <h1 className="text-4xl pt-20 mt-35 ps-5">Parents Says</h1>
               <div className="starIcons flex mt-10 ms-5 text-xl gap-1 text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </div>
               <p className="mt-10 ms-5">
                 Your child will laugh, play and explore at Summer at MLS. From
@@ -167,7 +167,7 @@ const Parentsays = () => {
                   />
                   <span>Mateo D. Daniel</span>
                 </div>
-                <i class="fa-solid fa-quote-right text-5xl "></i>
+                <i className="fa-solid fa-quote-right text-5xl "></i>
               </div>
             </div>
           </div>
@@ -180,11 +180,11 @@ const Parentsays = () => {
             <div className="pages w-full h-full   text-white ">
               <h1 className="text-4xl pt-20 mt-35 ps-5">Parents Says</h1>
               <div className="starIcons flex mt-10 ms-5 text-xl gap-1 text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </div>
               <p className="mt-10 ms-5">
                 The unique Mentone Grammar Community is our point of difference
@@ -201,7 +201,7 @@ const Parentsays = () => {
                   />
                   <span>Michael M. Mason</span>
                 </div>
-                <i class="fa-solid fa-quote-right text-5xl "></i>
+                <i className="fa-solid fa-quote-right text-5xl "></i>
               </div>
             </div>
           </div>

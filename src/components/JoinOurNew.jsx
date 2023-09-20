@@ -1,6 +1,7 @@
 import React from "react";
 
-const JoinOurNew = () => {
+const JoinOurNew = ({item}) => {
+
   return (
     <>
 

@@ -22,7 +22,7 @@ const Programs = () => {
             </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 gap-5">
             <div className="flex flex-col  space-y-2 bg-[#ebfffe] p-4 rounded-xl group justify-between">
               <div className="relative">
                 <div className="overflow-hidden rounded-lg">
