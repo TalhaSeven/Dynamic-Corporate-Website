@@ -9,7 +9,7 @@ import NavbarTop from './NavbarTop';
 import MenuNavbar from './MenuNavbar';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { setMenu } from '../../features/menuSlice';
+
 
   initTE({ Collapse, Dropdown });
 
@@ -23,20 +23,20 @@ const {menu} =useSelector((state) => state.menu)
 console.log(menu)
 
 
-const menuFunction =async()=>{
-  const url="https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
-  try {
-   const {data} =await axios(url)
-   dispatch(setMenu(data))
-  //  setMenu(data)
-   console.log(data)
-  } catch (error) {
-    console.log(error)  
-  }
-}
-useEffect(() => {
-  menuFunction()
-}, [])
+// const menuFunction =async()=>{
+//   const url="https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
+//   try {
+//    const {data} =await axios(url)
+//    dispatch(setMenu(data))
+//   //  setMenu(data)
+//    console.log(data)
+//   } catch (error) {
+//     console.log(error)  
+//   }
+// }
+// useEffect(() => {
+//   menuFunction()
+// }, [])
 
 
   return (
@@ -95,7 +95,7 @@ useEffect(() => {
           className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
           data-te-navbar-nav-ref=""
         >
-       {menu.map((item, index) => <MenuNavbar item={item} key={index}/> )}
+       {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} key={index}/> ) }
        
 
 
