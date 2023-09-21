@@ -13,7 +13,7 @@ import ProgramDetails from "../components/ProgramDetails";
 import WayToLearn from "../components/WayToLearn";
 import { Table } from "antd";
 import Faq from "../components/faq/Faq";
-import Settling from "../components/Settling";
+import Settling from "../components/settling/Settling";
 
 const Content = () => {
     const location = useLocation();
