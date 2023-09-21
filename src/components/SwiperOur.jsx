@@ -4,7 +4,12 @@ import "swiper/css/pagination";
 
 const SwiperOur = ({ item }) => {
   const data = item?.data;
+  const {content1}=item?.data
 
+  const parser = new DOMParser();
+  const cleanHtml1 = parser.parseFromString(content1, "text/html").body
+  .textContent;
+  const dangerouslyHtml = { __html: cleanHtml1 };
   return (
     <div className="px-18 py-20 md:p-24 lg:p-30 bg-gradient-to-r from-[#FEF7EC] to-[#F1FCF8] font-fredoka">
       <div className="container mx-auto">
@@ -13,8 +18,8 @@ const SwiperOur = ({ item }) => {
             <h2 className="text-[23px] md:text-[35px] lg:text-[40px] xl:text-5xl font-semibold mb-3 whitespace-nowrap ">
               {data.title1}
             </h2>
-            <p className="font-light text-[14px] lg:text-[18px]">
-              {data.content1}
+            <p className="font-light text-[14px] lg:text-[18px]" dangerouslySetInnerHTML={dangerouslyHtml}>
+             
             </p>
           </div>
         </div>
@@ -48,7 +53,10 @@ const SwiperOur = ({ item }) => {
               color1,
               image,
             } = item;
-
+            const parser = new DOMParser();
+            const cleanHtml = parser.parseFromString(content2, "text/html").body
+              .textContent;
+            const dangerouslyHtml = { __html: cleanHtml };
             return (
               <SwiperSlide key={index}>
                 <div className="flex flex-col  space-y-2 bg-white p-3 rounded-xl group justify-between min-h-[615px]  ">
@@ -75,12 +83,16 @@ const SwiperOur = ({ item }) => {
                       </svg>
                     </div>
                   </div>
-                    <h3 className={`swiperOurh3 font-semibold text-xl group-hover:[${color1}] md:text-2xl  duration-500`}>
+
+                  <div className={`group group-hover:[color:'${color1}'] `}>
+                    <h3 className="swiperOurh3 font-semibold text-xl md:text-2xl  duration-500">
                       {title2}
                     </h3>
-                  <p className="text-[15px] lg:text-[15px] min-h-[66px] md:min-h-[96px] xl:min-h-[70px] font-light">
-                    {content2}
-                  </p>
+                  </div>
+
+                  <div className="text-[15px] lg:text-[15px] min-h-[66px] md:min-h-[96px] xl:min-h-[70px] font-light" dangerouslySetInnerHTML={dangerouslyHtml}>
+                  
+                  </div>
                   <div
                     className={`flex flex-col sm:flex-row items-center justify-center bg-[${color1}]  rounded-xl p-3 sm:divide-x-2 divide-dashed text-white`}
                   >
