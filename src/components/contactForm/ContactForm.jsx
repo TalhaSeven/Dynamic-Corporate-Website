@@ -1,7 +1,7 @@
 import React from "react";
 import "./ContactForm.css";
 
-const ContactForm = () => {
+const ContactForm = ({ item }) => {
   return (
     <div>
       {/* contact icons started */}

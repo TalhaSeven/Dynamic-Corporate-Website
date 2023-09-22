@@ -1,36 +1,9 @@
-import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-const HomeSlider2 = () => {
-  const [sliderData, setSliderData] = useState([]);
-  const homeSliderAutoInterval = useRef(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(
-          "https://fuatmercan.com/kids/api/v1/page.php?slug=index&lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
-        );
-
-        // console.log(data);
-        const filteredData = await data.filter(
-          (item) => item.modulName === "slider"
-        );
-
-        if (filteredData) {
-          setSliderData(filteredData[0].data);
-        }
-
-        // console.log(filteredData[0].data);
-      } catch (error) {
-        console.error("Veri çekme hatası:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+const HomeSlider2 = ({ item }) => {
+  const sliderData = item?.data;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -44,16 +17,6 @@ const HomeSlider2 = () => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-
-  const homeSliderAuto = () => {
-    homeSliderAutoInterval.current = setInterval(() => {
-      nextSlide();
-    }, 3000); // Change slide every 5 seconds (adjust as needed)
-  };
-
-  useEffect(() => {
-    homeSliderAuto();
-  }, []);
 
   return (
     <div>
