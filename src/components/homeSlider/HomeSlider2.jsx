@@ -38,7 +38,12 @@ const HomeSlider2 = ({ item }) => {
               <h1 className="w-[70%] m-auto sm:m-0 text-[40px] sm:text-[50px]  md:text-[60px] lg:text-[70px] xl:text-[90px] 2xl:text-[110px] font-semibold mt-3">
                 {slide.title2}
               </h1>
-              <button className="bg-[#ff9b24] xl:text-[20px] font-semibold hover:bg-blue-500  transition duration-300 ease-in-out rounded-full px-5 py-3 mt-10">
+
+              <button
+                className={`${
+                  slide.button ? "block" : "hidden"
+                }  bg-[#ff9b24] xl:text-[20px] font-semibold hover:bg-blue-500  transition duration-300 ease-in-out rounded-full px-5 py-3 mt-10`}
+              >
                 {slide.button}
               </button>
             </div>
