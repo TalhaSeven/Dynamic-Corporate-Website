@@ -11,13 +11,13 @@ const MenuNavbar = ({ item, lang }) => {
   return (
     <>
       <li
-        className="mb-4 lg:mb-0 lg:pr-2"
+        className=" lg:mb-0 lg:pr-2"
         data-te-nav-item-ref=""
         data-dropdown
       >
         {/* Dashboard link */}
         <Link
-          className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-nonelg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+          className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400 whitespace-nowrap"
           to={`/${lang}/${slug}`}
           data-te-nav-link-ref=""
           onClick={(e)=>dispatch(getApiData({page:slug, lang}))}

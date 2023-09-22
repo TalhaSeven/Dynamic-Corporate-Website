@@ -15,12 +15,15 @@ import { getApiData } from "../../features/ApiSlice";
 initTE({ Collapse, Dropdown });
 
 const Navbar = () => {
-
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { menu } = useSelector((state) => state.menu);
   const { preferredLanguage:lang } = useSelector((state) => state.lang);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen); // Toggle mobile menu visibility
+  };
 
   const handleLanguage = (e) => {
     dispatch(setLanguage(e.target.value));
@@ -34,10 +37,10 @@ const Navbar = () => {
       <NavbarTop />
       {/* Main navigation container */}
       <nav
-        className="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5
+        className="flex-no-wrap relative flex w-full  lg:mb-0 items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5
    lg:flex-wrap lg:justify-start lg:py-4"
       >
-        <div className="flex w-full flex-wrap items-center justify-between px-3">
+        <div className="flex w-full flex-wrap items-center justify-between px-3  py-3 mb-0 sm:mb-16 lg:mb-0">
           {/* Hamburger button for mobile view */}
           <button
             className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
@@ -47,6 +50,7 @@ const Navbar = () => {
             aria-controls="navbarSupportedContent1"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={toggleMobileMenu}
           >
                      {/* Hamburger icon */}
                      <span className="[&>svg]:w-7">
@@ -72,19 +76,19 @@ const Navbar = () => {
       >
         {/* Logo */}
         <Link
-          className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+          className=" mb-0 ml-1 mr-1 lg:ml-2 lg:mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
           to="/en/index"
         >
           <img
             src="../images/logo.svg"
-            style={{ height: "50px" }}
+            style={{height: "50px" }}
             alt="TE Logo"
             loading="lazy"
           />
         </Link>
         {/* Left navigation links */}
         <ul
-          className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
+          className="list-style-none mr-auto lg:flex flex-col pl-0 lg:flex-row "
           data-te-navbar-nav-ref=""
         >
        {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} lang={lang} key={index}/> ) }
@@ -94,6 +98,12 @@ const Navbar = () => {
           </div>
           {/* Right elements */}
           <div className="relative flex items-center">
+          <div className="me-2">
+            <select value={lang} onChange={handleLanguage}>
+              <option value="en">English</option>
+              <option value="de">German</option>
+            </select>
+          </div>
             <button
               type="button"
               data-te-ripple-init=""
@@ -103,12 +113,7 @@ const Navbar = () => {
               Sign up for free
             </button>
           </div>
-          <div className="">
-            <select value={lang} onChange={handleLanguage}>
-              <option value="en">English</option>
-              <option value="de">German</option>
-            </select>
-          </div>
+         
         </div>
       </nav>
     </>
