@@ -5,15 +5,6 @@ import languageReducer from '../features/LanguageSlice'
 import storage from 'redux-persist/lib/storage';
 import { persistStore, persistReducer } from 'redux-persist';
 
-<<<<<<< HEAD
- export const store = configureStore({
-  reducer: {
-    api:apiReducer,
-    menu:menuReducer,
-    lang:languageReducer
-  }
-})
-=======
 import {
   FLUSH,
   REHYDRATE,
@@ -49,4 +40,3 @@ devTools: process.env.NODE_ENV !== "production",
 })
 
 export const persistor = persistStore(store);
->>>>>>> main

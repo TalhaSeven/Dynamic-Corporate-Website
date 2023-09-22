@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import AppRouter from "./router/AppRouter";
-
-function App() {
-=======
 import "./App.css";
 import "swiper/css";
 import { useLocation} from "react-router-dom";
@@ -23,7 +18,6 @@ function App() {
   useEffect(() => {
     dispatch(getMenuData(lang));
   }, [lang]);
->>>>>>> main
 
 
   const splittedUrl = location.pathname.split("/")
@@ -50,12 +44,8 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
-      <AppRouter/>
-=======
       <Navbar />
       <Content/>
->>>>>>> main
     </>
   );
 }
