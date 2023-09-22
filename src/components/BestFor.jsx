@@ -58,13 +58,13 @@ const BestFor = () => {
             </div>
             <div>
               <div className="flex gap-2 bg-white mb-2">
-                <i class="fa-solid fa-chevron-right text-xs bg-teal-400 rounded-full text-center w-4 h-4 text-cyan-700"></i>
+                <i className="fa-solid fa-chevron-right text-xs bg-teal-400 rounded-full text-center w-4 h-4 text-cyan-700"></i>
                 <p className="text-4xs font-thin">
                   We believe every child is intelligent so we care.
                 </p>
               </div>
               <div className="flex gap-2 bg-white">
-                <i class="fa-solid fa-chevron-right text-xs bg-teal-400 rounded-full text-center w-4 h-4 text-cyan-700"></i>
+                <i className="fa-solid fa-chevron-right text-xs bg-teal-400 rounded-full text-center w-4 h-4 text-cyan-700"></i>
                 <p className="text-4xs font-thin">
                   Teachers make a difference of your child.
                 </p>
@@ -77,13 +77,13 @@ const BestFor = () => {
                 </button>
               </div>
               <div className="flex justify-center gap-2">
-                <i class="fa-regular fa-circle-play mt-1.5  hover:text-teal-300 "></i>
+                <i className="fa-regular fa-circle-play mt-1.5  hover:text-teal-300 "></i>
                 <div className="h-6">
                   {" "}
                   <a href="https://www.youtube.com/watch?v=l62SIcbCPwo&t=8s">
-                    <h className="text-4xs font-thin  hover:text-teal-300">
+                    <h1 className="text-4xs font-thin  hover:text-teal-300">
                       Promotional Video
-                    </h>
+                    </h1>
                   </a>
                 </div>
               </div>
