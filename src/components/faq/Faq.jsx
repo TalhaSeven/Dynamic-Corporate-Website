@@ -2,7 +2,6 @@ import { useState } from "react";
 import { TECollapse } from "tw-elements-react";
 
 const Faq = ({ item }) => {
-  
   const [activeElement, setActiveElement] = useState(null);
   const title1 = item?.data.title1 || "";
   const image = item?.data.image || "";
