@@ -1,24 +1,18 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-import { getApiData } from "../features/ApiSlice";
+import { useSelector } from "react-redux";
 import HomeSlider2 from "../components/homeSlider/HomeSlider2";
 import BreadCrumb from "../components/BreadCrumb";
 import BestFor from "../components/BestFor";
 import JoinOurNew from "../components/JoinOurNew";
 import SwiperOur from "../components/SwiperOur";
 import Parentsays from "../components/parentsays/Parentsays";
-
 import ProgramDetails from "../components/ProgramDetails";
 import WayToLearn from "../components/WayToLearn";
-import { Table } from "antd";
+import Table from "../components/table/Table";
 import Faq from "../components/faq/Faq";
 import Settling from "../components/settling/Settling";
 
 const Content = () => {
-    const location = useLocation();
     const { apiPageData } = useSelector((state) => state.api);
-
   return (
     <div>
         {apiPageData?.length > 0 && apiPageData?.map((item,index)=> {
@@ -50,6 +44,7 @@ const Content = () => {
               break;
           }
         })}
+
     </div>
   )
 }

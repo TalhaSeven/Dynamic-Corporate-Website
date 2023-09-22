@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Parentsays.css";
-import axios from "axios";
 
 const Parentsays = ({ item }) => {
   const parentsays = item?.data;
@@ -67,7 +66,7 @@ const Parentsays = ({ item }) => {
               </button>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src={parentsays.videoUrl} // YouTube video URL'sini buraya ekleyin
+                  src={item.videoUrl} // YouTube video URL'sini buraya ekleyin
                   title="YouTube Video"
                   allowFullScreen
                   className="absolute inset-0 w-full h-full"
@@ -112,21 +111,21 @@ const Parentsays = ({ item }) => {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="sliderButton">
-          <button
-            className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
-            onClick={() => handlePageChange(1)}
-          ></button>
-          <button
-            className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
-            onClick={() => handlePageChange(2)}
-          ></button>
-          <button
-            className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
-            onClick={() => handlePageChange(3)}
-          ></button>
-        </div>
+      <div className="sliderButton">
+        <button
+          className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
+          onClick={() => handlePageChange(1)}
+        ></button>
+        <button
+          className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
+          onClick={() => handlePageChange(2)}
+        ></button>
+        <button
+          className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
+          onClick={() => handlePageChange(3)}
+        ></button>
       </div>
     </div>
   );

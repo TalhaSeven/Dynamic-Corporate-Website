@@ -1,16 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { TECollapse } from "tw-elements-react";
-import { useDispatch, useSelector } from "react-redux";
-import { getApiData } from "../../features/ApiSlice";
 
-const Faq = () => {
-  const dispatch = useDispatch();
-  const { apiPageData, error, loading } = useSelector((state) => state.api);
+const Faq = ({ item }) => {
   const [activeElement, setActiveElement] = useState(null);
-  const faqData = apiPageData?.filter((item) => item.modulName === "component2");
-  const title1 = faqData[0]?.data.title1 || "";
-  const image = faqData[0]?.data.image || "";
-  const other = faqData[0]?.data.other || [];
+  const title1 = item?.data.title1 || "";
+  const image = item?.data.image || "";
+  const other = item?.data.other || [];
 
   const handleClick = (value) => {
     if (value === activeElement) {
@@ -20,25 +15,15 @@ const Faq = () => {
     }
   };
 
-  useEffect(() => {
-    dispatch(getApiData());
-  }, []);
-
   return (
     <>
-      {faqData && (
+      {item && (
         <div className="p-20 space-10 font-fredoka">
-          {loading && (
-            <div className="flex items-center justify-center">
-              <img src="./loading.gif" alt="imgGif" />
-            </div>
-          )}
-          {error && <h1>{error}</h1>}
           <h4 className="text-[23px] md:text-[35px] lg:text-[40px] xl:text-5xl font-semibold mb-4 whitespace-nowrap ">
             {title1}
           </h4>
           <div className="flex flex-col md:flex-row gap-8">
-          {/*Verilerin Olduğu Alan*/}
+            {/*Verilerin Olduğu Alan*/}
             <div id="accordionExample" className="w-full md:w-1/2">
               {other.map((item, index) => {
                 // HTML içeriğini temizle
