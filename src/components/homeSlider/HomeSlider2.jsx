@@ -1,36 +1,9 @@
-import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-const HomeSlider2 = () => {
-  const [sliderData, setSliderData] = useState([]);
-  const homeSliderAutoInterval = useRef(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(
-          "https://fuatmercan.com/kids/api/v1/page.php?slug=index&lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
-        );
-
-        // console.log(data);
-        const filteredData = await data.filter(
-          (item) => item.modulName === "slider"
-        );
-
-        if (filteredData) {
-          setSliderData(filteredData[0].data);
-        }
-
-        // console.log(filteredData[0].data);
-      } catch (error) {
-        console.error("Veri çekme hatası:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+const HomeSlider2 = ({ item }) => {
+  const sliderData = item?.data;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -44,16 +17,6 @@ const HomeSlider2 = () => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-
-  const homeSliderAuto = () => {
-    homeSliderAutoInterval.current = setInterval(() => {
-      nextSlide();
-    }, 3000); // Change slide every 5 seconds (adjust as needed)
-  };
-
-  useEffect(() => {
-    homeSliderAuto();
-  }, []);
 
   return (
     <div>
@@ -75,7 +38,12 @@ const HomeSlider2 = () => {
               <h1 className="w-[70%] m-auto sm:m-0 text-[40px] sm:text-[50px]  md:text-[60px] lg:text-[70px] xl:text-[90px] 2xl:text-[110px] font-semibold mt-3">
                 {slide.title2}
               </h1>
-              <button className="bg-[#ff9b24] xl:text-[20px] font-semibold hover:bg-blue-500  transition duration-300 ease-in-out rounded-full px-5 py-3 mt-10">
+
+              <button
+                className={`${
+                  slide.button ? "block" : "hidden"
+                }  bg-[#ff9b24] xl:text-[20px] font-semibold hover:bg-blue-500  transition duration-300 ease-in-out rounded-full px-5 py-3 mt-10`}
+              >
                 {slide.button}
               </button>
             </div>
