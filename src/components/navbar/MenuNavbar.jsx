@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
  const MenuNavbar = ({item}) => {
     console.log(item)
@@ -10,13 +11,13 @@ import React from 'react'
       
       <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref=""   data-dropdown >
             {/* Dashboard link */}
-            <a
+            <Link
               className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-nonelg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
-              href={slug}
+              to={slug}
               data-te-nav-link-ref=""
             >
               {title}
-            </a>
+            </Link>
             {item[altmenu] && 
                <div className="dropdown">
                <ul className='list-style-none' data-te-navbar-nav-ref="">
@@ -26,16 +27,6 @@ import React from 'react'
                </div>
               
               }
-            {/* <div className="dropdown">
-            <ul className='list-style-none' data-te-navbar-nav-ref="">
-              <li><a href="#">home1</a>
-             
-               
-                  </li>
-              <li><a href="#">home2</a></li>
-              <li><a href="#">home3</a></li>
-            </ul>
-            </div> */}
         </li>
     </>
   )
