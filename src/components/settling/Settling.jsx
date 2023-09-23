@@ -46,11 +46,11 @@ const Settling = ({item}) => {
       <div className="grid  grid-cols-1 lg:grid-cols-2   gap-5 ">
         <div className=" col-span-1  md:w-full  relative overflow-hidden rounded-3xl h-['533px']">
       <Slider {...settings} ref={(c) => (slider = c)} className="w-full h-full">
-        {data.images.map((image, index) => (
+        {/* {data.images.map((image, index) => (
          
             <img key={index} src={image} alt={`slide-${index}`} className=" w-full h-full object-cover "/>
           
-        ))}
+        ))} */}
       </Slider>
      
       <IoIosArrowDropleft className="slider-button left" onClick={previousSlide}/>

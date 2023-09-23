@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 const MenuNavbar = ({ item, lang }) => {
+  console.log(item)
 
   const altmenu = "sub-menu";
   const dispatch = useDispatch();
@@ -13,7 +14,8 @@ const MenuNavbar = ({ item, lang }) => {
       <li
         className=" lg:mb-0 lg:pr-2"
         data-te-nav-item-ref=""
-        data-dropdown
+          data-dropdown 
+        
       >
         {/* Dashboard link */}
         <Link

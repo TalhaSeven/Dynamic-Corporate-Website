@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="flex w-full flex-wrap items-center justify-between px-3  py-3 mb-0 sm:mb-16 lg:mb-0">
           {/* Hamburger button for mobile view */}
           <button
-            className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 md:hidden"
             type="button"
             data-te-collapse-init=""
             data-te-target="#navbarSupportedContent1"
@@ -70,7 +70,7 @@ const Navbar = () => {
       </button>
       {/* Collapsible navigation container */}
       <div
-        className=" !visible menu hidden flex-grow basis-1 items-center sm:!flex lg:basis-auto"
+        className=" !visible menu hidden flex-grow  items-center sm:!flex lg:basis-auto"
         id="navbarSupportedContent1"
         data-te-collapse-item=""
       >
@@ -88,7 +88,7 @@ const Navbar = () => {
         </Link>
         {/* Left navigation links */}
         <ul
-          className="list-style-none mr-auto lg:flex flex-col pl-0 lg:flex-row "
+          className="list-style-none mr-auto md:flex flex-col pl-0 md:flex-row "
           data-te-navbar-nav-ref=""
         >
        {menu?.length > 0 && menu?.map((item, index) => <MenuNavbar item={item} lang={lang} key={index}/> ) }
