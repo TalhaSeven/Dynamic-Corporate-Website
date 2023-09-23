@@ -5,10 +5,10 @@ const BestFor = () => {
     <main>
       <section>
         <div
-          className="bg-white mx-auto justify-center items-center my-10 gap-10 container grid grid-col-1 sm:grid sm:grid-cols-2 font-fredoka  font-semibold
+          className="bg-white mx-auto justify-center items-center my-10 gap-10 container grid grid-cols-1 lg:grid-cols-2 font-fredoka  font-semibold
 "
         >
-          <div className="justify-center flex">
+          <div className="justify-center flex items-center ">
             <img
               /*   src="images/kids.jpg"*/
               src="https://playtolearnpreschool.us/wp-content/uploads/2015/05/FEATURED-SQUARED-2.png"
@@ -17,7 +17,7 @@ const BestFor = () => {
             />
           </div>
 
-          <div className="w-96 bg-white mx-auto ">
+          <div className=" bg-white ">
             <div>
               {" "}
               <h1 className="text-4xl font-bold my-4">Best For Your Kids</h1>
@@ -32,28 +32,42 @@ const BestFor = () => {
                 {/* burada span vermeyi düşündüm ama yapamadım */}
               </p>
             </div>
-            <div className="flex justify-center bg-teal-300 items-center my-8 p-2 gap-2 rounded-xl">
-              <div className="flex justify-center">
+            <div className=" grid grid-cols-1 divide-y md:grid-cols-3 px-8 md:px-2  md:divide-x md:divide-y-0  bg-teal-300  my-8 p-2  rounded-xl">
+              <div className="flex flex-row lg:flex-col xl:flex-row justify-start md:justify-center items-center ">
                 <p className="text-3xl font-black  text-white">14+</p>
-                <p className="text-xs tracking-tighter leading-3 mt-1.5  text-white">
-                  Years of experience
+                <div className="ps-2 flex lg:flex-col">
+                <p className="text-sm pe-1 tracking-tighter leading-3 mt-1.5  text-white">
+                  Years of 
                 </p>
-                <div className="text-white font-thin mt-1.5">|</div>
-              </div>
-              <div className="flex justify-center">
-                <p className="text-3xl font-bold  text-white">7K+</p>
-                <p className="text-xs tracking-tighter leading-3 mt-1.5  text-white">
-                  Students each year
+                <p className="text-sm tracking-tighter leading-3 mt-1.5  text-white">
+                experience
                 </p>
-                <div className="text-white font-thin items-center mt-1.5">
-                  |
                 </div>
+                
+              
               </div>
-              <div className="flex justify-center">
-                <p className="text-3xl font-bold  text-white">15+</p>
-                <p className="text-xs tracking-tighter leading-3 mt-1.5  text-white">
-                  Award Wining
+              <div className="flex flex-row lg:flex-col xl:flex-row justify-start  md:justify-center items-center">
+                <p className="text-3xl font-bold  text-white">7K+</p>
+                <div className="ps-2 flex lg:flex-col">
+                <p className="text-sm pe-1 tracking-tighter leading-3 mt-1.5  text-white">
+                Students
                 </p>
+                <p className="text-sm tracking-tighter leading-3 mt-1.5  text-white">
+                each year
+                </p>
+                </div>
+              
+              </div>
+              <div className="flex flex-row lg:flex-col xl:flex-row justify-start  md:justify-center items-center ">
+                <p className="text-3xl font-bold  text-white">15+</p>
+                <div className="ps-2 flex lg:flex-col">
+                <p className="text-sm pe-1 tracking-tighter leading-3 mt-1.5  text-white">
+                Award 
+                </p>
+                <p className="text-sm tracking-tighter leading-3 mt-1.5  text-white">
+                Wining
+                </p>
+                </div>
               </div>
             </div>
             <div>
