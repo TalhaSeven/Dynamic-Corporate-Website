@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-import {  useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-=======
 import { useSelector } from "react-redux";
->>>>>>> main
 import HomeSlider2 from "../components/homeSlider/HomeSlider2";
 import BreadCrumb from "../components/BreadCrumb";
 import BestFor from "../components/BestFor";

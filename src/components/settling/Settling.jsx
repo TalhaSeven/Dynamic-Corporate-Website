@@ -68,7 +68,7 @@ const Settling = ({ item }) => {
               className="settlingContent"
               dangerouslySetInnerHTML={dangerouslyHtml}
             ></div>
-
+          </div>
             <div className="settlingWrapper flex  items-center justify-center xs:justify-evenly  -ms-2 xl:justify-between  flex-wrap xs:mt-2  md:mt-4">
               <div className="settlingTeacher flex  items-start  space-x-2   pe-2 ">
                 <div className="flex ">
