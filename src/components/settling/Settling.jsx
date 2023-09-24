@@ -25,6 +25,7 @@ const Settling = ({ item }) => {
   return (
     <div className="lg:container">
       <div className="p-8 lg:p-25 font-fredoka ">
+
         <div className="grid  grid-cols-1 xl:grid-cols-2   gap-5 ">
           <div className="w-full  relative overflow-hidden rounded-3xl">
             <div className="carousel relative rounded-3xl w-full overflow-hidden h-full">
@@ -57,7 +58,7 @@ const Settling = ({ item }) => {
                 })}
               </Swiper>
             </div>
-          </div>
+
 
           <div className="  bg-[#FFF6EB]  flex flex-col  space-y-6 lg:space-y-10 rounded-3xl p-8 w-full h-full">
             <h3 className="settlingh3 text-3xl sm:text-[45px] font-semibold py-1  ">
