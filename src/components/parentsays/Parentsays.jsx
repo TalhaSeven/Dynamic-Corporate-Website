@@ -19,7 +19,7 @@ const Parentsays = ({ item }) => {
   };
 
   return (
-    <div className="containerDiv ">
+    <div className="containerDiv  ">
       {/*  Modal Video */}
 
       <div className="modalImg  relative w-screen   flex items-center justify-center">
@@ -79,53 +79,57 @@ const Parentsays = ({ item }) => {
 
       {/* Slider */}
 
-      <div className="sliderDiv w-full relative ">
-        <div className="w-full h-full flex">
-          <div className={`w-full h-full`}>
-            <div className="pages w-full h-full   text-white ">
-              <h1 className="text-4xl pt-20 mt-35 ps-5">{parentsays.title1}</h1>
-              <div className="starIcons flex mt-10 ms-5 text-xl gap-1 text-yellow-400  ">
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-              </div>
-              <p className="mt-10 m-4">
-                Happy Christmas to the whole Kindedo from everyone at Monkton. A
-                big thank you to Kindedo pupil Will who lent his Kindedo to this
-                card.
-              </p>
-
-              <div className="flex items-center justify-between mt-10 p-4 ">
-                <div className="flex justify-center items-center gap-3">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ_BYDkDg5q_L3co0ZetO7Am-_gjBeyUgRvQ2BW0fotuDk-rtEapPhvyaGJn2DOV1kBKQ&usqp=CAU"
-                    alt="profil1"
-                    className="w-20 h-20 rounded-full"
-                  />
-                  <span>Norma J. Johnston</span>
+      <div className="relative">
+        <div className="sliderDiv w-full relative ">
+          <div className="w-full h-full flex">
+            <div className={`w-full h-full`}>
+              <div className="pages w-full h-full   text-white ">
+                <h1 className="text-4xl pt-20 mt-35 ps-5">
+                  {parentsays.title1}
+                </h1>
+                <div className="starIcons flex mt-10 ms-5 text-xl gap-1 text-yellow-400  ">
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
                 </div>
-                <i className="fa-solid fa-quote-right text-5xl "></i>
+                <p className="mt-10 m-4">
+                  Happy Christmas to the whole Kindedo from everyone at Monkton.
+                  A big thank you to Kindedo pupil Will who lent his Kindedo to
+                  this card.
+                </p>
+
+                <div className="flex items-center justify-between mt-10 p-4 ">
+                  <div className="flex justify-center items-center gap-3">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ_BYDkDg5q_L3co0ZetO7Am-_gjBeyUgRvQ2BW0fotuDk-rtEapPhvyaGJn2DOV1kBKQ&usqp=CAU"
+                      alt="profil1"
+                      className="w-20 h-20 rounded-full"
+                    />
+                    <span>Norma J. Johnston</span>
+                  </div>
+                  <i className="fa-solid fa-quote-right text-5xl "></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="sliderButton">
-        <button
-          className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
-          onClick={() => handlePageChange(1)}
-        ></button>
-        <button
-          className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
-          onClick={() => handlePageChange(2)}
-        ></button>
-        <button
-          className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
-          onClick={() => handlePageChange(3)}
-        ></button>
+        <div className="sliderButton">
+          <button
+            className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
+            onClick={() => handlePageChange(1)}
+          ></button>
+          <button
+            className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
+            onClick={() => handlePageChange(2)}
+          ></button>
+          <button
+            className={`w-4 h-2 rounded-full bg-white hover:bg-black`}
+            onClick={() => handlePageChange(3)}
+          ></button>
+        </div>
       </div>
     </div>
   );
