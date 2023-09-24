@@ -1,11 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD:src/components/joinOurNew/JoinOurNew.jsx
+import "../joinOurNew/JoinOurNew.css"
+const JoinOurNew = ({item}) => {
+
+
+  const data=item?.data
+  const {content1}=item?.data
+  const {color1}=item?.data
+console.log(color1);
+=======
 
 const JoinOurNew = ({ item }) => {
   const data = item?.data;
   const { content1 } = item?.data;
   const { color1 } = item?.data;
   // console.log(color1);
+>>>>>>> main:src/components/JoinOurNew.jsx
   const parser = new DOMParser();
   const cleanHtml = parser.parseFromString(content1, "text/html").body
     .textContent;
