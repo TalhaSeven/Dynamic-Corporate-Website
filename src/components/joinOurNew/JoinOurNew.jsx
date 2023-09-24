@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "../joinOurNew/JoinOurNew.css"
 const JoinOurNew = ({item}) => {
 
 

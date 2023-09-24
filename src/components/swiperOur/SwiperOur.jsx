@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css/pagination";
+import "../swiperOur/SwiperOur.css";
+
 
 const SwiperOur = ({ item }) => {
   const data = item?.data;
@@ -29,18 +31,27 @@ const SwiperOur = ({ item }) => {
           spaceBetween={30}
           slidesPerView={3}
           pagination={{ clickable: true }}
+          className="swiperOur"
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
           breakpoints={{
-            1200: {
-              slidesPerView: 3,
-            },
-            768: {
-              slidesPerView: 2,
-            },
             0: {
               slidesPerView: 1,
             },
+            767: {
+              slidesPerView: 1,
+              
+            },
+  
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          
           }}
         >
           {data.other.map((item, index) => {

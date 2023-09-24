@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+
+import {  useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { getApiData } from "../features/ApiSlice";
 import HomeSlider2 from "../components/homeSlider/HomeSlider2";
 import BreadCrumb from "../components/BreadCrumb";
 import BestFor from "../components/BestFor";
-import JoinOurNew from "../components/JoinOurNew";
-import SwiperOur from "../components/SwiperOur";
+import JoinOurNew from "../components/joinOurNew/JoinOurNew";
+import SwiperOur from "../components/swiperOur/SwiperOur";
 import Parentsays from "../components/parentsays/Parentsays";
-
 import ProgramDetails from "../components/ProgramDetails";
 import WayToLearn from "../components/WayToLearn";
 import { Table } from "antd";
