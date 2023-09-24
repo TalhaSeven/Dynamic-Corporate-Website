@@ -25,7 +25,7 @@ const NavbarTop = () => {
             </svg>
             <span className="text-white">907-200-3462</span>
           </div>
-          <div>
+          <div className="hidden sm:block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={20}
