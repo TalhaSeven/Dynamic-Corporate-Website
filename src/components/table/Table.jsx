@@ -1,16 +1,24 @@
 import React from "react";
 
-const Table = () => {
+const Table = ({ item }) => {
+  const data = item?.data;
+  const { content1 } = item?.data;
+  console.log(data);
+  const parser = new DOMParser();
+  const cleanHtml = parser.parseFromString(content1, "text/html").body
+    .textContent;
+  const dangerouslyHtml = { __html: cleanHtml };
+  console.log(data.day1);
+
   return (
     <>
       <div className="container p-8 lg:p-30">
-        <h2 className="text-[3rem] text-center">Full Day with Learning</h2>
+        <h2 className="text-[3rem] text-center"> {data.title1}</h2>
         <div className="container">
-          <p className="text-[1.2rem] text-neutral-500 text-center">
-            {" "}
-            With the help of teachers and the environment as the third teacher,
-            students have opportunities to confidently take risks.
-          </p>
+          <p
+            className="text-[1.2rem] text-neutral-500 text-center"
+            dangerouslySetInnerHTML={dangerouslyHtml}
+          ></p>
         </div>
 
         {/* TABLE */}
@@ -39,69 +47,81 @@ const Table = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b bg-[#fff6eb]">
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Monday
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Otto
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                    </tr>
-                    <tr className="border-b bg-[#ffecd6]">
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Monday
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Thornton
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">@fat</td>
-                    </tr>
-                    <tr className="border-b bg-[#fff6eb]">
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Monday
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Thornton
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">@fat</td>
-                    </tr>
-                    <tr className="border-b bg-[#ffecd6]">
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Monday
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Thornton
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">@fat</td>
-                    </tr>
-                    <tr className="border-b bg-[#fff6eb]">
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Monday
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Thornton
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">@fat</td>
-                    </tr>
-                    <tr className="border-b bg-[#ffecd6]">
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Monday
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Thornton
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">@fat</td>
-                    </tr>
-                    <tr className="border-b bg-[#fff6eb]">
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Monday
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
-                        Larry the Bird{" "}
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">@twitter</td>
-                    </tr>
+                    {data?.day1 && data?.hour1 && data?.program1 && (
+                      <tr className="border-b bg-[#fff6eb]">
+                        <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                          {data?.day1}
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                          {data?.hour1}
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          {" "}
+                          {data?.program1}
+                        </td>
+                      </tr>
+                    )}
+
+                    {data?.day2 && data?.hour2 && data?.program2 && (
+                      <tr className="border-b bg-[#fff6eb]">
+                        <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                          {data?.day2}
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                          {data?.hour2}
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          {data?.program2}
+                        </td>
+                      </tr>
+                    )}
+
+                    {data?.day3 && data?.hour3 && data?.program3 && (
+                      <tr className="border-b bg-[#fff6eb]">
+                        <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                          {data?.day3}
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                          {data?.hour3}
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          {data?.program3}
+                        </td>
+                      </tr>                      
+                    )}
+                     {(data?.day4 && data?.hour4 && data?.program4) && (
+                       <tr className="border-b bg-[#fff6eb]">
+                       <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                        {data?.day4}
+                       </td>
+                       <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                       {data?.hour4}
+                       </td>
+                       <td className="whitespace-nowrap px-6 py-4">   {data?.program4}</td>
+                     </tr>
+                      )  }
+                       {(data?.day5 && data?.hour5 && data?.program5) && (
+                       <tr className="border-b bg-[#fff6eb]">
+                       <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                        {data?.day5}
+                       </td>
+                       <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                       {data?.hour5}
+                       </td>
+                       <td className="whitespace-nowrap px-6 py-4">   {data?.program5}</td>
+                     </tr>
+                      )  }
+                       {(data?.day6 && data?.hour6 && data?.program6) && (
+                       <tr className="border-b bg-[#fff6eb]">
+                       <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                        {data?.day6}
+                       </td>
+                       <td className="whitespace-nowrap px-6 py-4 border-e-2 border-white">
+                       {data?.hour6}
+                       </td>
+                       <td className="whitespace-nowrap px-6 py-4">   {data?.program6}</td>
+                     </tr>
+                      )  }
                   </tbody>
                 </table>
               </div>

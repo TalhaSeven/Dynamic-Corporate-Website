@@ -69,8 +69,8 @@ const Navbar = () => {
         </span>
       </button>
       {/* Collapsible navigation container */}
-      <div
-        className=" !visible menu hidden flex-grow  items-center sm:!flex lg:basis-auto"
+       <div
+        className=" !visible menu hidden flex-grow  items-center md:!flex lg:basis-auto sm:ps-10"
         id="navbarSupportedContent1"
         data-te-collapse-item=""
       >
@@ -97,13 +97,8 @@ const Navbar = () => {
 
           </div>
           {/* Right elements */}
-          <div className="relative flex items-center">
-          <div className="me-2">
-            <select value={lang} onChange={handleLanguage}>
-              <option value="en">English</option>
-              <option value="de">German</option>
-            </select>
-          </div>
+          <div className="relative flex items-center sm:ps-10 lg:ps-0 pb-3">
+          
             <button
               type="button"
               data-te-ripple-init=""
@@ -112,6 +107,12 @@ const Navbar = () => {
             >
               Sign up for free
             </button>
+            <div className="ms-3">
+            <select value={lang} onChange={handleLanguage}>
+              <option value="en">English</option>
+              <option value="de">German</option>
+            </select>
+          </div>
           </div>
          
         </div>
