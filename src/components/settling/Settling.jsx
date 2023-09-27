@@ -38,7 +38,7 @@ const Settling = ({ item }) => {
                 loop={true}
                className="swiperSettling"
               >
-                {images.map((image, index) => {
+                {images.length > 0 && images?.map((image, index) => {
                   return (
                     <SwiperSlide
                       key={index}
