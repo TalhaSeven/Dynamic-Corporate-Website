@@ -1,11 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getApiData = createAsyncThunk(
-  "apiData",
-  async ({ page, lang }, { rejectWithValue }) => {
+export const getSiteData = createAsyncThunk(
+  "site",
+  async ({ rejectWithValue }) => {
     const token = process.env.REACT_APP_API_TOKEN;
-    const url = `https://fuatmercan.com/kids/api/v1/page.php?slug=${page}&lang=${lang}&token=${token}`;
+    const url = `https://fuatmercan.com/kids/api/v1/site.php?token=${token}`;
     try {
       const { data } = await axios(url);
       return data;
@@ -16,29 +16,29 @@ export const getApiData = createAsyncThunk(
 );
 
 const initialState = {
-  apiPageData: [],
+  site: [],
   loading: false,
   error: "",
 };
 
-export const apiSlice = createSlice({
-  name: "api",
+export const siteSlice = createSlice({
+  name: "site",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getApiData.pending, (state) => {
+      .addCase(getSiteData.pending, (state) => {
         state.loading = true;
       })
-      .addCase(getApiData.fulfilled, (state, { payload }) => {
+      .addCase(getSiteData.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.apiPageData = payload;
+        state.site = payload;
       })
-      .addCase(getApiData.rejected, (state, { payload }) => {
+      .addCase(getSiteData.rejected, (state, { payload }) => {
         state.loading = false;
         state.error = payload;
       });
   },
 });
 
-export default apiSlice.reducer;
+export default siteSlice.reducer;

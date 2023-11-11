@@ -1,52 +1,63 @@
 import { useSelector } from "react-redux";
-import HomeSlider2 from "../components/homeSlider/HomeSlider2";
+import Slider from "../components/Slider";
 import BreadCrumb from "../components/BreadCrumb";
-import BestFor from "../components/BestFor";
-import JoinOurNew from "../components/joinOurNew/JoinOurNew";
-import SwiperOur from "../components/swiperOur/SwiperOur";
-import Parentsays from "../components/parentsays/Parentsays";
-import ProgramDetails from "../components/ProgramDetails";
-import WayToLearn from "../components/WayToLearn";
-import Table from "../components/table/Table";
-import Faq from "../components/faq/Faq";
-import Settling from "../components/settling/Settling";
+import Component1 from "../components/Component1";
+import Component2 from "../components/Component2";
+import Component3 from "../components/Component3";
+import Component4 from "../components/Component4/Component4";
+import Component5 from "../components/Component5/Component5";
+import Component6 from "../components/Component6/Component6";
+import Component7 from "../components/Component7";
+import Component8 from "../components/Component8";
+import Component9 from "../components/Component9";
+import Text from "../components/Text.jsx";
+import ContactForm from "../components/contactForm/ContactForm";
 
 const Content = () => {
-    const { apiPageData } = useSelector((state) => state.api);
+  const { apiPageData } = useSelector((state) => state.api);
   return (
     <div>
-        {apiPageData?.length > 0 && apiPageData?.map((item,index)=> {
-          const {modulName} = item;
+      {apiPageData?.length > 0 &&
+        apiPageData?.map((item, index) => {
+          const { modulName } = item;
           switch (modulName) {
             case "slider":
-              return <HomeSlider2 item={item} key={index} />;
+              return <Slider item={item} key={index} />;
             case "breadcrumb":
-              return <BreadCrumb item={item}  key={index} />;
+              return <BreadCrumb item={item} key={index} />;
             case "component1":
-              return <BestFor item={item}  key={index} />;
+              return <Component1 item={item} key={index}/>;
             case "component2":
-              return <Faq item={item}  key={index} />;
+              return <Component2 item={item} key={index} />;
             case "component3":
-              return <JoinOurNew  item={item}  key={index} />;
+              return <Component3 item={item} key={index} />;
             case "component4":
-              return <SwiperOur item={item}  key={index} />;
+              return <Component4 item={item} key={index} />;
             case "component5":
-              return <Parentsays item={item}  key={index} />;
+              return <Component5 item={item} key={index} />;
             case "component6":
-              return <Settling item={item}  key={index} />;
+              return <Component6 item={item} key={index} />;
             case "component7":
-              return <ProgramDetails item={item}  key={index} />;
+              return <Component7 item={item} key={index} />;
             case "component8":
-              return <WayToLearn item={item}  key={index} />;
+              return <Component8 item={item} key={index} />;
             case "component9":
-              return <Table item={item}  key={index} />;
+              return <Component9 item={item} key={index} />;
+              // eslint-disable-next-line  
+            case "text":
+              // eslint-disable-next-line 
+              return  (
+                <>
+                <Text item={item} key={index} /> 
+                <ContactForm />
+                </>
+              )
             default:
-              break;
+              return null;
           }
         })}
-
     </div>
-  )
-}
+  );
+};
 
-export default Content
+export default Content;

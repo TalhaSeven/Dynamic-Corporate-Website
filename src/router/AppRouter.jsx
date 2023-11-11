@@ -1,17 +1,15 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "../components/navbar/Navbar";
-import Content from "../pages/Content";
 import { useDispatch, useSelector } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { getMenuData } from "../features/MenuSlice";
 import { getApiData } from "../features/ApiSlice";
+import Content from "../pages/Content";
+import Navbar from "../components/navbar/Navbar";
 
 const AppRouter = () => {
   const { preferredLanguage: lang } = useSelector((state) => state.lang);
-  const { apiPageData, error, loading } = useSelector((state) => state.api);
   const { menu } = useSelector((state) => state.menu);
   const dispatch = useDispatch();
-  // const location = useLocation();
 
   useEffect(() => {
     dispatch(getMenuData(lang));

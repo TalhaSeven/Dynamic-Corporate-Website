@@ -11,10 +11,10 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import cecelia from "./../components/ourTeachersImg/cecelia.webp";
-import emmy from "./../components/ourTeachersImg/emmy.webp";
-import frances from "./../components/ourTeachersImg/frances.webp";
-import olinda from "./../components/ourTeachersImg/olinda.webp";
+import cecelia from "./../components/ourTeachers/cecelia.webp";
+import emmy from "./../components/ourTeachers/emmy.webp";
+import frances from "./../components/ourTeachers/frances.webp";
+import olinda from "./../components/ourTeachers/olinda.webp";
 
 const OurTeachers = () => {
   return (

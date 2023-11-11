@@ -1,9 +1,11 @@
-import {combineReducers, configureStore } from '@reduxjs/toolkit'
-import apiReducer from '../features/ApiSlice'
-import menuReducer from '../features/MenuSlice'
-import languageReducer from '../features/LanguageSlice'
-import storage from 'redux-persist/lib/storage';
-import { persistStore, persistReducer } from 'redux-persist';
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import apiReducer from "../features/ApiSlice";
+import menuReducer from "../features/MenuSlice";
+import languageReducer from "../features/LanguageSlice";
+import siteReducer from "../features/SiteSlice";
+import translationsReducer from "../features/TranslationsSlice";
+import storage from "redux-persist/lib/storage";
+import { persistStore, persistReducer } from "redux-persist";
 
 import {
   FLUSH,
@@ -15,28 +17,29 @@ import {
 } from "redux-persist";
 
 const rootReducer = combineReducers({
-    api:apiReducer,
-    menu:menuReducer,
-    lang:languageReducer
-})
+  api: apiReducer,
+  menu: menuReducer,
+  lang: languageReducer,
+  site: siteReducer,
+  translations: translationsReducer,
+});
 
 const persistConfig = {
-  key:"root",
-  storage
-}
+  key: "root",
+  storage,
+};
 
-const persistedReducer = persistReducer(persistConfig,rootReducer)
-
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
-  getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    },
-  }),
-devTools: process.env.NODE_ENV !== "production",
-})
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+  devTools: process.env.NODE_ENV !== "production",
+});
 
 export const persistor = persistStore(store);
